@@ -6,33 +6,27 @@
 *** Opis  : Plik definicyjny klasy opisWAVa                             ***
 **************************************************************************/
 
-#include <malloc.h>
-#include "define.h"
 #include "opiswava.h"
+#include "define.h"
+#include <malloc.h>
 
-opisWAVa::opisWAVa(void)
-{
- Init_opisWAVa();
+opisWAVa::opisWAVa(void) { Init_opisWAVa(); }
+
+void opisWAVa::Init_opisWAVa(void) {
+  samples = 0;
+  jest_grany = 0;
+  size = 0; // w stronach 16kB
+  //    dlug_ostatniej_strony = 0;
+  zajety = 0;
+  zagrano = 0;
+  do_zagrania = 0;
 }
 
-void opisWAVa::Init_opisWAVa(void)
-{
-    samples = 0;
-    jest_grany = 0;
-    size   = 0;        //w stronach 16kB
-//    dlug_ostatniej_strony = 0;
-    zajety = 0;
-    zagrano = 0;
-    do_zagrania = 0;
-}
-
-void opisWAVa::ZwolnijUchwyt(void)
-{    
-    if(samples && (zajety == ZWYKLE_ZALADOWANIE_WAVA)) 
-    {
-        free(samples);        
-    }
-    Init_opisWAVa();
+void opisWAVa::ZwolnijUchwyt(void) {
+  if (samples && (zajety == ZWYKLE_ZALADOWANIE_WAVA)) {
+    free(samples);
+  }
+  Init_opisWAVa();
 }
 
 /*int opisWAVa::Przydziel_pamiec(size_t wielkosc)
@@ -46,7 +40,6 @@ void opisWAVa::ZwolnijUchwyt(void)
     }
     return BLAD_PRZYDZIALU_PAMIECI_EMS;
 }*/
-
 
 /*
 

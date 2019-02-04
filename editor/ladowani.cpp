@@ -1,9 +1,9 @@
 //#include <iostream.h>
-#include <stdio.h>
-#include <dos.h>      //delay()
-#include <conio.h>    //getch()
+#include "EMS.h" //WYCIAC
 #include "menegdma.h"
-#include "EMS.h"     //WYCIAC
+#include <conio.h> //getch()
+#include <dos.h>   //delay()
+#include <stdio.h>
 
 extern MENEGERDMA SND;
 extern byte JestSB;
@@ -71,142 +71,137 @@ word daj_m(word znak)
  return 0xFFFF;
 } */
 
-//void UstawAdliba(void);
+// void UstawAdliba(void);
 extern void UstawAdlibPresent(unsigned char Wartosc);
 
-void Inst(char *nazwa,MENEGERDMA &SND)
-{
-
- word rez;
- rez = SND.InstalujWAV(nazwa);
- //cout<<'\b';
- if(rez)
-  cprintf("-");
-  //cout<<nazwa<<" - blad instalacji "<<(word)rez<<endl;
- else
-  {
-//   instal++;
-   cprintf(".");
-   //cout<<nazwa<<" zainstalowany"<<endl;
+void Inst(char *nazwa, MENEGERDMA &SND) {
+  word rez;
+  rez = SND.InstalujWAV(nazwa);
+  // cout<<'\b';
+  if (rez)
+    cprintf("-");
+  // cout<<nazwa<<" - blad instalacji "<<(word)rez<<endl;
+  else {
+    //   instal++;
+    cprintf(".");
+    // cout<<nazwa<<" zainstalowany"<<endl;
   }
 }
 
-int ladowanie(void)
-{
+int ladowanie(void) {
   byte Adlib = 0;
   byte jest_SB = 0;
 
-
   FILE *plik;
   if ((plik = fopen("SETUP.INI", "rb")) == NULL)
-     return 1;
+    return 1;
 
-  fread(&Adlib,1,1,plik);
-  fread(&jest_SB,1,1,plik);
-  fread(&irq,1,1,plik);
-  fread(&port,2,1,plik);
-  fread(&kanal,2,1,plik);
+  fread(&Adlib, 1, 1, plik);
+  fread(&jest_SB, 1, 1, plik);
+  fread(&irq, 1, 1, plik);
+  fread(&port, 2, 1, plik);
+  fread(&kanal, 2, 1, plik);
   fclose(plik);
 
-  JestSB=jest_SB;
+  JestSB = jest_SB;
 
- UstawAdlibPresent(Adlib);
- SND.Init(jest_SB,irq,port,kanal);
-// SND.Osiagniecia();
- if(jest_SB)
- {
-  cout<<"Initialisiere Sounds... ";
+  UstawAdlibPresent(Adlib);
+  SND.Init(jest_SB, irq, port, kanal);
+  // SND.Osiagniecia();
+  if (jest_SB) {
+    cout << "Initialisiere Sounds... ";
 
-   Inst("data\\w001.dat",SND);
-   Inst("data\\w002.dat",SND);
-   Inst("data\\w003.dat",SND);
-   Inst("data\\w004.dat",SND);
-   Inst("data\\w005.dat",SND);
-   Inst("data\\w006.dat",SND);
-   Inst("data\\w007.dat",SND);
-   Inst("data\\w008.dat",SND);
-   Inst("data\\w009.dat",SND);
-   Inst("data\\w010.dat",SND);
+    Inst("data\\w001.dat", SND);
+    Inst("data\\w002.dat", SND);
+    Inst("data\\w003.dat", SND);
+    Inst("data\\w004.dat", SND);
+    Inst("data\\w005.dat", SND);
+    Inst("data\\w006.dat", SND);
+    Inst("data\\w007.dat", SND);
+    Inst("data\\w008.dat", SND);
+    Inst("data\\w009.dat", SND);
+    Inst("data\\w010.dat", SND);
 
-   Inst("data\\w011.dat",SND);
-   Inst("data\\w012.dat",SND);
-   Inst("data\\w013.dat",SND);
-   Inst("data\\w014.dat",SND);
-   Inst("data\\w015.dat",SND);
-   Inst("data\\w016.dat",SND);
-   Inst("data\\w017.dat",SND);
-   Inst("data\\w018.dat",SND);
-   Inst("data\\w019.dat",SND);
-   Inst("data\\w020.dat",SND);
+    Inst("data\\w011.dat", SND);
+    Inst("data\\w012.dat", SND);
+    Inst("data\\w013.dat", SND);
+    Inst("data\\w014.dat", SND);
+    Inst("data\\w015.dat", SND);
+    Inst("data\\w016.dat", SND);
+    Inst("data\\w017.dat", SND);
+    Inst("data\\w018.dat", SND);
+    Inst("data\\w019.dat", SND);
+    Inst("data\\w020.dat", SND);
 
-   Inst("data\\w021.dat",SND);
-   Inst("data\\w022.dat",SND);
-   Inst("data\\w023.dat",SND);
-   Inst("data\\w024.dat",SND);
-   Inst("data\\w025.dat",SND);
-   Inst("data\\w026.dat",SND);
-   Inst("data\\w027.dat",SND);
-   Inst("data\\w028.dat",SND);
-   Inst("data\\w029.dat",SND);
-   Inst("data\\w030.dat",SND);
+    Inst("data\\w021.dat", SND);
+    Inst("data\\w022.dat", SND);
+    Inst("data\\w023.dat", SND);
+    Inst("data\\w024.dat", SND);
+    Inst("data\\w025.dat", SND);
+    Inst("data\\w026.dat", SND);
+    Inst("data\\w027.dat", SND);
+    Inst("data\\w028.dat", SND);
+    Inst("data\\w029.dat", SND);
+    Inst("data\\w030.dat", SND);
 
-   Inst("data\\w031.dat",SND);
-   Inst("data\\w032.dat",SND);
-   Inst("data\\w033.dat",SND);
-   Inst("data\\w034.dat",SND);
-   Inst("data\\w035.dat",SND);
-   Inst("data\\w036.dat",SND);
-   Inst("data\\w037.dat",SND);
-   Inst("data\\w038.dat",SND);
-   Inst("data\\w039.dat",SND);
-   Inst("data\\w040.dat",SND);
+    Inst("data\\w031.dat", SND);
+    Inst("data\\w032.dat", SND);
+    Inst("data\\w033.dat", SND);
+    Inst("data\\w034.dat", SND);
+    Inst("data\\w035.dat", SND);
+    Inst("data\\w036.dat", SND);
+    Inst("data\\w037.dat", SND);
+    Inst("data\\w038.dat", SND);
+    Inst("data\\w039.dat", SND);
+    Inst("data\\w040.dat", SND);
 
-   Inst("data\\w041.dat",SND);
-   Inst("data\\w042.dat",SND);
-   Inst("data\\w043.dat",SND);
-   Inst("data\\w044.dat",SND);
-   Inst("data\\w045.dat",SND);
-   Inst("data\\w046.dat",SND);
-   Inst("data\\w047.dat",SND);
-   Inst("data\\w048.dat",SND);
-   Inst("data\\w049.dat",SND);
-   Inst("data\\w050.dat",SND);
+    Inst("data\\w041.dat", SND);
+    Inst("data\\w042.dat", SND);
+    Inst("data\\w043.dat", SND);
+    Inst("data\\w044.dat", SND);
+    Inst("data\\w045.dat", SND);
+    Inst("data\\w046.dat", SND);
+    Inst("data\\w047.dat", SND);
+    Inst("data\\w048.dat", SND);
+    Inst("data\\w049.dat", SND);
+    Inst("data\\w050.dat", SND);
 
-   Inst("data\\w051.dat",SND);
-   Inst("data\\w052.dat",SND);
-   Inst("data\\w053.dat",SND);
-   Inst("data\\w054.dat",SND);
-   Inst("data\\w055.dat",SND);
-}
- ///
- /*cout<<"\nGram..."<<EMS::Sprawdz_Liczba_uchwytow()<<endl;
- m = 0;
- znak = 1;
-
- do
- {
-  //znak = kbhit();
-  //if(znak)
-  //{
-   znak = getch(); m = daj_m(znak);
-   // SND.Przerwij_odtwarzanie_DMA();// getch();
-   // delay(1);
-   if(m<instal)
-    {
-     //if(!SND.Odtwarzaj(m))
-     if(!SND(m))
-       cout<<"\nOdtwarzam muzyke TU BYL DAWNIEJ TYTUL ...sluchaj i delektuj sie...";
-    }
-  //}
- }while(znak!=27);
-
- if(SND.Przerwano_DMA())
-  {
-   SND.Przerwij_odtwarzanie_DMA();
-   cout<<"\nOdtwarzanie zostlo przerwane";
+    Inst("data\\w051.dat", SND);
+    Inst("data\\w052.dat", SND);
+    Inst("data\\w053.dat", SND);
+    Inst("data\\w054.dat", SND);
+    Inst("data\\w055.dat", SND);
   }
- else
-  cout<<"\nOdtwarzanie zakonczone";
-  */
- return 0;
+  ///
+  /*cout<<"\nGram..."<<EMS::Sprawdz_Liczba_uchwytow()<<endl;
+  m = 0;
+  znak = 1;
+
+  do
+  {
+   //znak = kbhit();
+   //if(znak)
+   //{
+    znak = getch(); m = daj_m(znak);
+    // SND.Przerwij_odtwarzanie_DMA();// getch();
+    // delay(1);
+    if(m<instal)
+     {
+      //if(!SND.Odtwarzaj(m))
+      if(!SND(m))
+        cout<<"\nOdtwarzam muzyke TU BYL DAWNIEJ TYTUL ...sluchaj i delektuj
+  sie...";
+     }
+   //}
+  }while(znak!=27);
+
+  if(SND.Przerwano_DMA())
+   {
+    SND.Przerwij_odtwarzanie_DMA();
+    cout<<"\nOdtwarzanie zostlo przerwane";
+   }
+  else
+   cout<<"\nOdtwarzanie zakonczone";
+   */
+  return 0;
 }

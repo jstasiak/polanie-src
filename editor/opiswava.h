@@ -12,28 +12,28 @@
 #include "typepas.h"
 #include "wav.h"
 
-class opisWAVa
-{
+class opisWAVa {
 public:
- opisWAVa(void);
+  opisWAVa(void);
+
 private:
- word  UchEMS;  	//Uchwyt dla EMS'a
- word  dlug_ostatniej_strony;
- byte  jest_grany;
- byte  dlug;		//w stronach 16kB
- byte  grana_strona;
- byte  zajety;
- byte  czestotliwosc;
+  word UchEMS; // Uchwyt dla EMS'a
+  word dlug_ostatniej_strony;
+  byte jest_grany;
+  byte dlug; // w stronach 16kB
+  byte grana_strona;
+  byte zajety;
+  byte czestotliwosc;
 
-//private:
+  // private:
 
 public:
- void Init_opisWAVa(void);
- word Zwolnij_Uchwyt(void);
- word Przydziel_pamiec_EMS(long);
+  void Init_opisWAVa(void);
+  word Zwolnij_Uchwyt(void);
+  word Przydziel_pamiec_EMS(long);
 
- friend class OPERWAV;
- friend class MENEGERDMA;
+  friend class OPERWAV;
+  friend class MENEGERDMA;
 };
 
 #endif

@@ -9,7 +9,7 @@
 
 #ifndef DEFINICJE_STALYCH_DLA_KLAS_MENEGERWAV_I_OPERWAV
 #define DEFINICJE_STALYCH_DLA_KLAS_MENEGERWAV_I_OPERWAV
-//AB #include "typepas.h"
+// AB #include "typepas.h"
 
 const byte BLAD_DLA_KONSTRUKTORA = 0xFF;
 const byte BRAK_BLADU_PRZYDZIALU = 0x00;
@@ -17,7 +17,7 @@ const byte BRAK_BLADU_PRZYDZIALU = 0x00;
 const byte JEST_GRANY = 1;
 const byte NIE_JEST_GRANY = 0;
 
-//const word WIELKOSC_PAMIECI = 0x7080; //450kB
+// const word WIELKOSC_PAMIECI = 0x7080; //450kB
 const NULLL = 0;
 const word WAV_ZALADOWANY = 0;
 const word BRAK_PLIKU_WAV = 2;
@@ -29,7 +29,7 @@ const word NIEPOPRAWNE_PROBKI = 7;
 
 const word PROBKI_DMA_ZAINSTALOWANE = 0;
 const word BRAK_WOLNEGO_UCHWYTU_DMA = 1;
-const word BRAK_WOLNEGO_UCHWYTU     = 0xFFFF;
+const word BRAK_WOLNEGO_UCHWYTU = 0xFFFF;
 
 const word PROBA_ZWOLNIENIA_ZBYT_DUZEGO_UCHWYTU = 8;
 const word PROBA_ZWOLNIENIA_UCHWYTU_NULL = 9;

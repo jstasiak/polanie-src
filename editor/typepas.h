@@ -10,5 +10,5 @@
 #ifndef DEFINICJA_TYPU_byte_I_word
 #define DEFINICJA_TYPU_byte_I_word
 typedef unsigned char byte;
-typedef unsigned int  word;
+typedef unsigned int word;
 #endif
