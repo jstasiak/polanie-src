@@ -23,3 +23,8 @@ Is it modified in any way?
 --------------------------
 
 It's been formatted using ``clang-format`` and converted to UTF-8, that's it.
+
+Polish keywords for visibility
+------------------------------
+
+Kod źródłowy gry Polanie.
