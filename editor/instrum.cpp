@@ -5,7 +5,7 @@
 #define ID_IBK 0x1A4B4249
 
 instrum *ReadInstrumIndex(char *filename, int index)
-/* odczytuje z pliku filename (mo¿e to byæ plik
+/* odczytuje z pliku filename (moÅ¼e to byÄ‡ plik
    SBI lub IBK) instrument o numerze index
    (od 0 do 127 dla IBK i 0 dla SBI) */
 {

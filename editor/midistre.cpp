@@ -1,7 +1,7 @@
 #include "midistre.h"
 
 void MIDIstream::SetData(BYTE *data, WORD len)
-// ustawia adres i d³ugoœæ bufora z danymi MIDI
+// ustawia adres i dÅ‚ugoÅ›Ä‡ bufora z danymi MIDI
 {
   databuf = data;
   datalen = len;
@@ -9,7 +9,7 @@ void MIDIstream::SetData(BYTE *data, WORD len)
 }
 
 long MIDIstream::ReadVarLen()
-// odczytuje liczbê w postaci o zmiennej d³ugoœci
+// odczytuje liczbÄ™ w postaci o zmiennej dÅ‚ugoÅ›ci
 {
   long value;
   BYTE c;
@@ -23,7 +23,7 @@ long MIDIstream::ReadVarLen()
 }
 
 BYTE MIDIstream::GetAndSkip()
-// pobiera kolejny bajt danych omijaj¹c
+// pobiera kolejny bajt danych omijajÄ…c
 // ew. komunikaty czasowe
 {
   while (databuf[datapos++] >= 0xF8)
@@ -32,8 +32,8 @@ BYTE MIDIstream::GetAndSkip()
 }
 
 void MIDIstream::DoMessage()
-// pobiera kolejny komunikat i wywo³uje
-// odpowiedni¹ dla niego funkcjê
+// pobiera kolejny komunikat i wywoÅ‚uje
+// odpowiedniÄ… dla niego funkcjÄ™
 {
   BYTE B, C, D;
   WORD len;
@@ -49,12 +49,12 @@ void MIDIstream::DoMessage()
   }
   lastmsg = B;
   switch (B >> 4) {
-  case 0x8: // wy³¹cz nutê
+  case 0x8: // wyÅ‚Ä…cz nutÄ™
     C = GetAndSkip();
     D = GetAndSkip();
     Msg8(B & 15, C, D);
     break;
-  case 0x9: // w³¹cz nutê
+  case 0x9: // wÅ‚Ä…cz nutÄ™
     C = GetAndSkip();
     D = GetAndSkip();
     Msg9(B & 15, C, D);
@@ -69,7 +69,7 @@ void MIDIstream::DoMessage()
     D = GetAndSkip();
     MsgB(B & 15, C, D);
     break;
-  case 0xE: // zmiana wys. dŸwiêku
+  case 0xE: // zmiana wys. dÅºwiÄ™ku
     C = GetAndSkip();
     D = GetAndSkip();
     MsgE(B & 15, C, D);
@@ -77,7 +77,7 @@ void MIDIstream::DoMessage()
   case 0xC: // zmiana programu
     MsgC(B & 15, GetAndSkip());
     break;
-  case 0xD: // g³oœnoœæ
+  case 0xD: // gÅ‚oÅ›noÅ›Ä‡
     MsgD(B & 15, GetAndSkip());
     break;
   default:

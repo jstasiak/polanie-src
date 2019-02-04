@@ -1,5 +1,5 @@
 struct instrum {
-  /* ustawienia zgodne ze struktur¹
+  /* ustawienia zgodne ze strukturÄ…
      pliku SBI od bajtu 24h do 2Eh */
   unsigned mMULTI : 4;
   unsigned mKSR : 1;

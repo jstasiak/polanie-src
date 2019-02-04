@@ -746,35 +746,35 @@ void InitBattle(int level,
             place[i][j] = 10;
           }
           // skaly
-          if (z == '”') {
+          if (z == '√ì') {
             i = 9;
             place[i][j] = 10;
           }
-          if (z == '…') {
+          if (z == '√â') {
             i = 10;
             place[i][j] = 10;
           }
-          if (z == '∫') {
+          if (z == '≈ü') {
             i = 11;
             place[i][j] = 10;
           }
-          if (z == 'Ÿ') {
+          if (z == '≈Æ') {
             i = 12;
             place[i][j] = 10;
           }
-          if (z == 'ƒ') {
+          if (z == '√Ñ') {
             i = 13;
             place[i][j] = 10;
           }
-          if (z == '∏') {
+          if (z == '¬∏') {
             i = 14;
             place[i][j] = 10;
           }
-          if (z == '≥') {
+          if (z == '≈Ç') {
             i = 15;
             place[i][j] = 10;
           }
-          if (z == 'Õ') {
+          if (z == '√ç') {
             i = 16;
             place[i][j] = 10;
           }
@@ -782,19 +782,19 @@ void InitBattle(int level,
             i = 17;
             place[i][j] = 0;
           } // wejscie
-          if (z == 'º') {
+          if (z == 'ƒΩ') {
             i = 18;
             place[i][j] = 10;
           }
-          if (z == '‘') {
+          if (z == '√î') {
             i = 19;
             place[i][j] = 10;
           }
-          if (z == '⁄') {
+          if (z == '√ö') {
             i = 20;
             place[i][j] = 10;
           }
-          if (z == '∑') {
+          if (z == '¬∑') {
             i = 21;
             place[i][j] = 10;
           }

@@ -1,6 +1,6 @@
 /*
  Plik : CD.CPP
- Autor: Artur Bidziñski
+ Autor: Artur BidziÅ„ski
  Data : 18 maja 1996r.
 */
 
@@ -537,7 +537,7 @@ int PlayTrack(int numbertrack) {
       break;
   }
   if (i > LastTrack) {
-    //                 cout<<"­ Seek beyond last track"<<endl;
+    //                 cout<<"Â­ Seek beyond last track"<<endl;
     return -1;
   }
   play_request.start = cd.track[i].start;
@@ -673,7 +673,7 @@ stop_request={sizeof (stop_request),0,133,0,{0,0,0,0,0,0,0,0}};
 int CDAStopPlaying(void)
 {
   CallMSCDEX((void*)&stop_request);
-        clogfile<<"ù Playing stopped"<<endl;
+        clogfile<<"Å¯ Playing stopped"<<endl;
   return CheckError(stop_request.status);
 }
 
@@ -713,7 +713,7 @@ int CDAPlayTrack(int track)
 
         if (mscdex.busy) CDAStopPlaying();
   if (track>mscdex.last_track) {
-                clogfile<<"­ Seek beyond last track"<<endl;
+                clogfile<<"Â­ Seek beyond last track"<<endl;
                 return -1;
         }
 
@@ -722,14 +722,14 @@ int CDAPlayTrack(int track)
     if ((mscdex.track[i].control&0x40)==0) break;
   }
   if (i>mscdex.last_track) {
-                clogfile<<"­ Seek beyond last track"<<endl;
+                clogfile<<"Â­ Seek beyond last track"<<endl;
                 return -1;
         }
   play_request.start=mscdex.track[i].start;
   play_request.sectors=red2hsg (mscdex.total_time-mscdex.track[i].start);
   CallMSCDEx(&play_request);
   CheckError(play_request.status);
-  clogfile<<"ù Playing started from track "<<i<<endl;
+  clogfile<<"Å¯ Playing started from track "<<i<<endl;
         return 0;
 }
 

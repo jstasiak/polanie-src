@@ -1294,7 +1294,7 @@ void ShowText(int level, int t)
 void ShowPicture(int nr, int b) {
   int t = LoadToScreen13h(nr, b);
   // if(t){Close13h();cprintf("Fehler 303. Zu wenig Arbeitsspeicher.\n\r
-  // Benîtigt werden 586 KB freien Arbeitsspeicher.\n\r");exit(0);}
+  // Ben‚Äùtigt werden 586 KB freien Arbeitsspeicher.\n\r");exit(0);}
 }
 ///////////////////////////////////////////////////////////////
 void Haslo(char *haslo, char nr) {

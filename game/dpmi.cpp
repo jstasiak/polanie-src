@@ -1,6 +1,6 @@
 /*
  Plik : DPMI.CPP
- Autor: Artur BidziÒski
+ Autor: Artur Bidzi≈Ñski
  Data : 18 maja 1996r.
 */
 
@@ -60,13 +60,13 @@ int Presence_DPMI_in_real_mode(void) {
 }
 
 /*
-        UWAGA: PONIØSZE FUNKCJE WOLNO UØYWAC TYLKO W”WCZAS,
-               GDY Obecnosc_DPMI() ZWR”CI£A ZERO.
+        UWAGA: PONI≈ªSZE FUNKCJE WOLNO U≈ªYWAC TYLKO W√ìWCZAS,
+               GDY Obecnosc_DPMI() ZWR√ìCI≈ÅA ZERO.
 */
 /////////////////////////////////////////////////////////////////
-// Zwraca 0 gdy przydzielenie sie powiod≥o
-// Zwraca 1 gdy kleska i wtedy zmienia sie znaczenie parametrÛw:
-// Adres_segmentowy = kod b≥Ídu systemu DOS
+// Zwraca 0 gdy przydzielenie sie powiod≈Ço
+// Zwraca 1 gdy kleska i wtedy zmienia sie znaczenie parametr√≥w:
+// Adres_segmentowy = kod b≈Çƒôdu systemu DOS
 // Selektor         = rozmiar najwiekszsego dostepnego bloku w paragrafach
 /////////////////////////////////////////////////////////////////
 int alloc_DOS_memory(unsigned short how_paragraphs,

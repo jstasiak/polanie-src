@@ -119,7 +119,7 @@ int sb::Detekcja_IRQ_DMA(void) {
 }
 
 void sb::WyslijBajt(int rozkaz) {
-  // Poprawiæ absolutnie poprawic
+  // PoprawiÄ‡ absolutnie poprawic
   while (inp(Adres_DMA + 0x000C) & 0x0080)
     ;
   outp(Adres_DMA + 0x000C, rozkaz);

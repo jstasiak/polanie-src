@@ -1,14 +1,14 @@
 #include "adlib.h"
 #include <conio.h>
 #include <dos.h>
-// pocz¹tkowa waroœæ rejestru BDh
+// poczÄ…tkowa waroÅ›Ä‡ rejestru BDh
 char reg0xBD = 0x00; // 0xC0;
 
 int _cx3_3, _cx23_3, RythmMode;
 
 void _setCXvalues()
-/* ustawia _cx3_3 i _cx23_3 na liczbê
-   obiegów pêtli opóŸniaj¹cej dla
+/* ustawia _cx3_3 i _cx23_3 na liczbÄ™
+   obiegÃ³w pÄ™tli opÃ³ÅºniajÄ…cej dla
    odpowiednio 3.3 us i 23.3 us */
 {
   // Artur tu popracuj
@@ -44,8 +44,8 @@ void _setCXvalues()
 #pragma startup _setCXvalues
 
 void WriteALReg(char reg, char value)
-// wpisuje wartoœæ value do rejestru reg
-// uk³adu FM
+// wpisuje wartoÅ›Ä‡ value do rejestru reg
+// ukÅ‚adu FM
 {
   // Artur tu popracuj
 
@@ -74,8 +74,8 @@ char ReadALByte()
 }
 
 int IsALPresent()
-/* wykrywa obecnoœæ karty Ad Lib
-   przy pomocy liczników.
+/* wykrywa obecnoÅ›Ä‡ karty Ad Lib
+   przy pomocy licznikÃ³w.
    Zwraca 0 lub 1=znalezionp */
 {
   // Artur tu popracuj
@@ -96,11 +96,11 @@ return (s1 & 0xE0)==0 && (s2 & 0xE0)==0xC0;
   return 0; // to wytnij
 }
 
-// g³oœnoœci dla posczególnych instrumentów kanalow
+// gÅ‚oÅ›noÅ›ci dla posczegÃ³lnych instrumentÃ³w kanalow
 char _volumeReg[11];
 char _volumeRegM[11];
 void SetALMode(int mode)
-/* prze³¹cza Ad Lib na tryb melodyczny
+/* przeÅ‚Ä…cza Ad Lib na tryb melodyczny
    dla mode==0 lub tryb rytmiczny
    dla mode!=0 */
 {
@@ -116,23 +116,23 @@ void SetALMode(int mode)
   WriteALReg(8, 0);
 }
 
-int _carrOfs[9] // ofsety noœników dla poszcz. instrum
+int _carrOfs[9] // ofsety noÅ›nikÃ³w dla poszcz. instrum
     = {3, 4, 5, 11, 12, 13, 19, 20, 21};
 char synth[9] = {0, 0, 0, 0, 0,
                  0, 0, 0, 0}; // ustalenie rodzaju syntezy dla kazdego z kanalow
-// ofsety modulatorów sa o 3 mniejsze
+// ofsety modulatorÃ³w sa o 3 mniejsze
 
 /*
-  W poni¿szych funkcjach parametr voice mo¿e przyjmowaæ
-  wartoœci od 0 do 8 w trybie melodycznym
+  W poniÅ¼szych funkcjach parametr voice moÅ¼e przyjmowaÄ‡
+  wartoÅ›ci od 0 do 8 w trybie melodycznym
   i od 0 do 10 w trybie rytmicznym. W tym drugim przypadku
-  mamy nastêpuj¹ce przyporz¹dkowania:
-  6 - bêben basowy; 7 - werbel; 8 - bêbenek;
+  mamy nastÄ™pujÄ…ce przyporzÄ…dkowania:
+  6 - bÄ™ben basowy; 7 - werbel; 8 - bÄ™benek;
   9 - talerz; 10 - high hat
 */
 
 void SetInstrum(int voice, void *instr)
-// przeprogramowuje g³os voice
+// przeprogramowuje gÅ‚os voice
 // wg danych wskazywanych przez instr
 {
   char *instrByte = (char *)instr;
@@ -165,8 +165,8 @@ void SetInstrum(int voice, void *instr)
 int _voiceLastFreq[11];
 
 void PlayNoteFreq(int voice, int octave, int f_num)
-// w³¹cza g³os voice ustawiaj¹c numer oktawy na octave
-// i wartoœæ F_NUMBER na f_num
+// wÅ‚Ä…cza gÅ‚os voice ustawiajÄ…c numer oktawy na octave
+// i wartoÅ›Ä‡ F_NUMBER na f_num
 {
   if (RythmMode && voice > 5) {
     /*  switch (voice)
@@ -190,8 +190,8 @@ void PlayNoteFreq(int voice, int octave, int f_num)
 }
 
 void PlayNote(int voice, int octave, int note)
-/* w³¹cza g³os voice z czêstotliwoœci¹ odpowiadaj¹c¹
-   nucie note z oktawy octave, gdzie note mo¿e byæ:
+/* wÅ‚Ä…cza gÅ‚os voice z czÄ™stotliwoÅ›ciÄ… odpowiadajÄ…cÄ…
+   nucie note z oktawy octave, gdzie note moÅ¼e byÄ‡:
    0=C; 1=C#; 2=D; 3=D#; 4=E; 5=F;
    6=F#; 7=G; 8=G#; 9=A; 10=A#; 11=B              */
 {
@@ -202,14 +202,14 @@ void PlayNote(int voice, int octave, int note)
 
 ///////////////////////////////////////////////////////////////////
 void StopNote(int voice)
-// wy³¹cza nutê na g³osie voice powoli
+// wyÅ‚Ä…cza nutÄ™ na gÅ‚osie voice powoli
 {
   WriteALReg(0xA0 + voice, _voiceLastFreq[voice] & 255);
   WriteALReg(0xB0 + voice, _voiceLastFreq[voice] >> 8);
 }
 ///////////////////////////////////////////////////////////////////
 void KillNote(int voice)
-// wy³¹cza nutê na g³osie voice szybko
+// wyÅ‚Ä…cza nutÄ™ na gÅ‚osie voice szybko
 {
   WriteALReg(0xA0 + voice, 0);
   WriteALReg(0xB0 + voice, 0);
@@ -218,8 +218,8 @@ void KillNote(int voice)
 //////////////////////////////////////////////////////////////////////////////////
 
 void SetVolume(int voice, unsigned char volume) // volume 0-min 63-max
-// ustawia g³oœnoœæ dla g³osu voice
-// na wartoœæ volume (0=min, 127=max)
+// ustawia gÅ‚oÅ›noÅ›Ä‡ dla gÅ‚osu voice
+// na wartoÅ›Ä‡ volume (0=min, 127=max)
 {
   int RythmVolumeOfs[] = {19, 20, 18, 21, 17};
   // volume = (64 - (volume >> 1)) >> 1;//oryginal

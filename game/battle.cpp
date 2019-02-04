@@ -2246,35 +2246,35 @@ void InitBattle(int level,
             place[i][j] = 10;
           }
           // skaly
-          if (z == '”') {
+          if (z == '√ì') {
             placeG[i][j] = 9;
             place[i][j] = 10;
           }
-          if (z == '…') {
+          if (z == '√â') {
             placeG[i][j] = 10;
             place[i][j] = 10;
           }
-          if (z == '∫') {
+          if (z == '≈ü') {
             placeG[i][j] = 11;
             place[i][j] = 10;
           }
-          if (z == 'Ÿ') {
+          if (z == '≈Æ') {
             placeG[i][j] = 12;
             place[i][j] = 10;
           }
-          if (z == 'ƒ') {
+          if (z == '√Ñ') {
             placeG[i][j] = 13;
             place[i][j] = 10;
           }
-          if (z == '∏') {
+          if (z == '¬∏') {
             placeG[i][j] = 14;
             place[i][j] = 10;
           }
-          if (z == '≥') {
+          if (z == '≈Ç') {
             placeG[i][j] = 15;
             place[i][j] = 10;
           }
-          if (z == 'Õ') {
+          if (z == '√ç') {
             placeG[i][j] = 16;
             place[i][j] = 10;
           }
@@ -2282,19 +2282,19 @@ void InitBattle(int level,
             placeG[i][j] = 17;
             place[i][j] = 0;
           } // wejscie
-          if (z == 'º') {
+          if (z == 'ƒΩ') {
             placeG[i][j] = 18;
             place[i][j] = 10;
           }
-          if (z == '‘') {
+          if (z == '√î') {
             placeG[i][j] = 19;
             place[i][j] = 10;
           }
-          if (z == '⁄') {
+          if (z == '√ö') {
             placeG[i][j] = 20;
             place[i][j] = 10;
           }
-          if (z == '∑') {
+          if (z == '¬∑') {
             placeG[i][j] = 21;
             place[i][j] = 10;
           }
@@ -2505,7 +2505,7 @@ void InitBattle(int level,
             castle[0].m[p0].SetIFF(1);
             castle[0].m[p0].Show();
           }
-          if (z == '∞' && p0 < 39) // 176  nasz Pastuch
+          if (z == '¬∞' && p0 < 39) // 176  nasz Pastuch
           {
             p0++;
             castle[0].m[p0].Init(10, i, j, 0, 5);
@@ -2513,7 +2513,7 @@ void InitBattle(int level,
             castle[0].m[p0].SetIFF(1);
             castle[0].m[p0].Show();
           }
-          if (z == '±' && p0 < 39) // 177 nasz Mag
+          if (z == '¬±' && p0 < 39) // 177 nasz Mag
           {
             p0++;
             castle[0].m[p0].Init(11, i, j, 0, 5);
@@ -2521,7 +2521,7 @@ void InitBattle(int level,
             castle[0].m[p0].SetIFF(1);
             castle[0].m[p0].Show();
           }
-          if (z == '≤' && p0 < 39) //  178  nasz Kusznik
+          if (z == 'Àõ' && p0 < 39) //  178  nasz Kusznik
           {
             p0++;
             castle[0].m[p0].Init(12, i, j, 0, 5);
@@ -2640,7 +2640,7 @@ void InitBattle(int level,
             castle[1].m[p1].SetIFF(2);
             castle[1].m[p1].Show();
           }
-          if (z == '≠' && p1 < 39) // 173          pastuch
+          if (z == '¬≠' && p1 < 39) // 173          pastuch
           {
             p1++;
             castle[1].m[p1].Init(10, i, j, 0, 5);
@@ -2648,7 +2648,7 @@ void InitBattle(int level,
             castle[1].m[p1].SetIFF(2);
             castle[1].m[p1].Show();
           }
-          if (z == 'Æ' && p1 < 39) // 174    Mag
+          if (z == '¬Æ' && p1 < 39) // 174    Mag
           {
             p1++;
             castle[1].m[p1].Init(11, i, j, 0, 5);
@@ -2656,7 +2656,7 @@ void InitBattle(int level,
             castle[1].m[p1].SetIFF(2);
             castle[1].m[p1].Show();
           }
-          if (z == 'Ø' && p1 < 39) // 175            kusznik
+          if (z == '≈ª' && p1 < 39) // 175            kusznik
           {
             p1++;
             castle[1].m[p1].Init(12, i, j, 0, 5);

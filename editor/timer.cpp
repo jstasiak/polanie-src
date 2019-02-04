@@ -1,7 +1,7 @@
 #include <dos.h>
 
-/* UWAGA: ten modu³ nale¿y kompilowaæ przy wy³¹czonej
-   kontroli przepe³nienia stosu
+/* UWAGA: ten moduÅ‚ naleÅ¼y kompilowaÄ‡ przy wyÅ‚Ä…czonej
+   kontroli przepeÅ‚nienia stosu
    (OPTIONS|COMPILER|ENTRY/EXIT CODE/Standard stack frame) */
 
 int licznik = 0;

@@ -1,6 +1,6 @@
 /*
  Plik : DPMI.H
- Autor: Artur Bidziñski
+ Autor: Artur BidziÅ„ski
  Data : 18 maja 1996r.
 */
 
