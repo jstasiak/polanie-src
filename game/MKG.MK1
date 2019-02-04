@@ -1,0 +1,24 @@
+!define BLANK ""
+c:\projekty\polanie.cd\image13h.obj : c:\projekty\polanie.cd\image13h.cpp .A&
+UTODEPEND
+ @c:
+ cd c:\projekty\polanie.cd
+ *wpp386 image13h.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -d2 -5r -bt&
+=dos -mf
+
+c:\projekty\polanie.cd\mk_mix.obj : c:\projekty\polanie.cd\mk_mix.cpp .AUTOD&
+EPEND
+ @c:
+ cd c:\projekty\polanie.cd
+ *wpp386 mk_mix.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -d2 -5r -bt=d&
+os -mf
+
+c:\projekty\polanie.cd\mkg.exe : c:\projekty\polanie.cd\image13h.obj c:\proj&
+ekty\polanie.cd\mk_mix.obj .AUTODEPEND
+ @c:
+ cd c:\projekty\polanie.cd
+ @%write mkg.lk1 NAME mkg
+ @%append mkg.lk1 FIL image13h.obj,mk_mix.obj
+ @%append mkg.lk1 
+ *wlink d all SYS dos4g op m op c op maxe=25 op q op symf @mkg.lk1
+

@@ -1,0 +1,447 @@
+WATCOM Linker Version 10.6
+Copyright by WATCOM International Corp. 1985, 1996. All rights reserved.
+Created on:       96/11/30 15:35:30
+Executable Image: mkg.exe
+creating a DOS/4G executable
+Warning(1028): char near drive[] is an undefined reference
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:00000000        00001e60
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE                          0001:00000000   00000010
+_TEXT                  CODE                          0001:00000010   00006787
+_NULL                  BEGDATA        DGROUP         0002:00000000   00000004
+_AFTERNULL             BEGDATA        DGROUP         0002:00000004   00000000
+CONST                  DATA           DGROUP         0002:00000004   000000f4
+CONST2                 DATA           DGROUP         0002:000000f8   00000000
+_DATA                  DATA           DGROUP         0002:000000f8   0000070e
+XIB                    DATA           DGROUP         0002:00000806   00000000
+XI                     DATA           DGROUP         0002:00000806   00000012
+XIE                    DATA           DGROUP         0002:00000818   00000000
+YIB                    DATA           DGROUP         0002:00000818   00000000
+YI                     DATA           DGROUP         0002:00000818   00000006
+YIE                    DATA           DGROUP         0002:0000081e   00000000
+TIB                    DATA           DGROUP         0002:0000081e   00000000
+TI                     DATA           DGROUP         0002:0000081e   00000000
+TIE                    DATA           DGROUP         0002:0000081e   00000000
+DATA                   DATA           DGROUP         0002:0000081e   00000000
+_BSS                   BSS            DGROUP         0002:00000820   00000640
+STACK                  STACK          DGROUP         0002:00000e60   00001000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: image13h.obj(C:\PROJEKTY\POLANIE.CD\image13h.cpp)
+0001:00000010* int near InitVirtualScreen()
+0001:00000064* void near ClearScreen13h()
+0001:0000008c  void near ShowVirtualScreen()
+0001:000000c0* void near FreeVirtualScreen()
+0001:000000f4+ void near SetScreen( int )
+0001:00000138  void near Init13h()
+0001:00000180* int near InitBuffers13h()
+0001:00000204* void near FreeBuffers13h()
+0001:00000254  void near Close13h()
+0001:00000284* void near SetClippingArea13h( int, int, int, int )
+0001:000002c4* void near PutPixel13h( int, int, int )
+0001:000002f8+ char near * near LoadImage13h( char near * )
+0001:000003d4* int near LoadToScreen13h( int, int )
+0001:000004e8* int near SaveImage256( char near *, char near * )
+0001:00000578+ void near GetImage13h( int, int, int, int, char near * )
+0001:00000630+ int near GetImageSize13h( int, int, int, int )
+0001:00000668+ void near PutImage13h( int, int, char near *, int )
+0001:000008e4+ void near PutImageChange13h( int, int, char near *, int, char, char )
+0001:00000ab4* void near PutImageChangeInverse13h( int, int, char near *, int, char, char )
+0001:00000c7c* void near Rectangle13h( int, int, int, int, int )
+0001:00000e98+ void near Bar13h( int, int, int, int, int )
+0001:00000fe8* int near InitText13h()
+0001:00001264+ char near Transform13h( char unsigned )
+0001:000013e4* void near ClearText13h()
+0001:00001434* void near OutTextDelay13h( int, int, char near *, int, int, int )
+0001:0000153c* void near CenterText13h( int, int, int, int, char near *, int )
+0001:00001688+ void near OutText13h( int, int, char near *, int )
+0001:00001714* int near Write13h( int, int, int, int, char near *, int, int )
+0001:00001afc* void near OpenGraphicFile()
+0001:00001b38* void near CloseGraphicFile()
+0001:00001b58* void near OpenPaletteFile()
+0001:00001b94* void near ClosePaletteFile()
+0001:00001bb4* void near LoadExtendedPalette( int )
+0001:00001c14* void near LoadPalette13h( char near * )
+0001:00001c78+ void near SetExtendedPalette()
+0002:00000820+ __iobuf near * near palettefile
+0002:00000824+ __iobuf near * near graphicfile
+0002:00000828  char near * near VirtualScreen
+0002:0000082c+ char near * near RealVirtualScreen
+0002:00000830+ char near * near rgb
+0002:00000834+ char near * near Buffer330
+0002:00000838+ char near * near Rgb
+0002:0000083c+ char near * near index[]
+0002:000009a8+ int near ClipX1
+0002:000009ac+ int near ClipY1
+0001:00001d64* void near DownPalette( int )
+0001:00001e50+ void near BlackPalette()
+0001:00001e84* void near RisePalette( int )
+0002:000000f8+ int near length[]
+0002:00000264+ int near lineLength
+0002:00000268+ int near ClipX2
+0002:0000026c+ int near ClipY2
+Module: mk_mix.obj(C:\PROJEKTY\POLANIE.CD\mk_mix.cpp)
+0001:00001fa0  main_
+0001:00002178+ int near UnpackPCX( __iobuf near *, char near *, int, int )
+0002:000009b4+ __3rs877PCXHEADER near Header
+0002:00000a34+ char near * near picture
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(nmalloc)
+0001:000022d7  _nmalloc_
+0001:000022d7  malloc_
+0002:00000278  ___nheapbeg
+0002:0000027c  ___MiniHeapRover
+0002:00000280  ___LargestSizeB4MiniHeapRover
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(set386)
+0001:000023c0  memset_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(memcpy)
+0001:000023d8  memcpy_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(nfree)
+0001:000023fd  _nfree_
+0001:000023fd  free_
+0002:00000a38  ___MiniHeapFreeRover
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(int386)
+0001:0000247f  int386_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fopen)
+0001:0000249c+ __open_flags_
+0001:00002631+ _fsopen_
+0001:0000266a  fopen_
+0001:000026dc* freopen_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fread)
+0001:0000271e  fread_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fclose)
+0001:000028f9  fclose_
+0001:00002926  __shutdown_stream_
+0001:00002947+ __MkTmpFile_
+0001:000029ac  __doclose_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fseek)
+0001:00002a7e  fseek_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fwrite)
+0001:00002b7a  fwrite_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(sprintf)
+0001:00002d4d  sprintf_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(delay386)
+0001:00002d7e  delay_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(strlen)
+0001:00002d83  strlen_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(getch)
+0001:00002d9c  getch_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(outp)
+0001:00002db9  outp_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(printf)
+0001:00002dc3  printf_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fgetc)
+0001:00002de5  fgetc_
+0001:00002e6e+ __filbuf_
+0001:00002e9d  __fill_buffer_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(cstrt386)
+0001:00000003* ___begtext
+0002:00000000* __nullarea
+0002:00000284* __GDAptr
+0002:00000288* __D16Infoseg
+0002:0000028a* __x386_zero_base_selector
+0001:00002f4c  _cstart_
+0001:000031db  __exit_
+0001:000031dd  __do_exit_with_msg__
+0001:00003218  __GETDS
+0001:00003218  ___GETDSStart_
+0001:00003223  ___GETDSEnd_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(memalloc)
+0001:00003224  __MemAllocator
+0001:000032cc  __MemFree
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(grownear)
+0001:00003428+ __FreeDPMIBlocks_
+0001:00003484* __ReAllocDPMIBlock_
+0001:000035f7+ __LastFree_
+0001:000037c8  __ExpandDGROUP_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(nmemneed)
+0001:00003991  __nmemneed_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(heapmod)
+0002:00000a3c  ___nheap_clean
+0002:00000a3d* ___fheap_clean
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(__stos)
+0001:000039a0  __STOSB
+0001:000039d7* __STOSD
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(segread)
+0001:00003a43  segread_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(intx386)
+0001:00003a6b  int386x_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(tolower)
+0001:00003a84  tolower_
+0001:00003a84* _tolower_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(seterrno)
+0001:00003a92* __set_EDOM_
+0001:00003a97  __set_errno_
+0001:00003aa3* __set_ERANGE_
+0001:00003aaa* __set_EINVAL_
+0001:00003aba  __set_doserrno_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(iob)
+0002:0000028c  ___iob
+0002:00000494* ___tmpfnext
+0002:00000495  __fmode
+0002:00000a40  ___ClosedStreams
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(open)
+0001:00003ac6* open_
+0001:00003aea  sopen_
+0001:00003cd3* __set_binary_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(allocfp)
+0001:00003d38  __allocfp_
+0001:00003dde  __freefp_
+0001:00003e17  __purgefp_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(chktty)
+0001:00003e35  __chktty_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(stinit)
+0002:00000a44  ___OpenStreams
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(ioalloc)
+0001:00003e66  __ioalloc_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(qread)
+0001:00003edd  __qread_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(gtpid)
+0001:00003efc  getpid_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(flush)
+0001:00003f02  __flush_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(ftell)
+0001:00003fdb  ftell_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(lseek)
+0001:0000401d  lseek_
+0001:0000401d* _lseek_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(_clse)
+0001:00004060  __close_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(remove)
+0001:00004095  remove_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(tell)
+0001:0000409a  tell_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(qwrit)
+0001:000040ab  __qwrite_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(errno)
+0001:0000411f  __get_errno_ptr_
+0001:00004125  __get_doserrno_ptr_
+0002:00000a48+ _errno
+0002:00000a4c+ __doserrno
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fputc)
+0001:0000412b  fputc_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(prtf)
+0001:000041cf  __prtf_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(delay)
+0001:00004dad  __delay_init_
+0001:00004ddf  __delay_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(crwd386)
+0002:000004b0  __psp
+0002:000004db  __osmajor
+0002:000004dc  __osminor
+0002:000004d2  __Extender
+0002:000004d3  __ExtenderSubtype
+0002:000004d4  __X32VM
+0002:000004b4* __x386_stacklow
+0002:000004a8  __LpCmdLine
+0002:000004ac  __LpPgmName
+0002:000004a0  __dynend
+0002:000004a4  __curbrk
+0002:000004b4  __STACKLOW
+0002:000004b8  __STACKTOP
+0002:000004bc  __ASTACKSIZ
+0002:000004c0  __ASTACKPTR
+0002:000004c4  __cbyte
+0002:000004c8* __cbyte2
+0002:000004cc  __child
+0002:000004d5  __Envptr
+0002:000004d9  __Envseg
+0002:000004d0  __no87
+0002:000004dd  __FPE_handler
+0002:000004dd  ___FPE_handler
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fprtf)
+0001:00004e27  __fprtf_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(flushall)
+0001:00004ea6  flushall_
+0001:00004eab  __flushall_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(gtche)
+0001:00004eda  getche_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(cmain386)
+0001:00004ef7  __CMain
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(inirt386)
+0001:00004f46  __InitRtns
+0001:00004f91  __FiniRtns
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(seg386)
+0000:00001234  __DOSseg__
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(minreal)
+0002:00000a54  ___minreal
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(heapen)
+0001:00004fe0* _heapenable_
+0002:000004e4  ___heap_enabled
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(sbrk386)
+0001:00004ff0* sbrk_
+0001:000050b8  __brk_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(amblksiz)
+0002:000004e8  __amblksiz
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(intxa386)
+0001:00005184  __int386x_
+0001:000051e1* _DoINTR_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(isatt)
+0001:00005562  isatty_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(dosret)
+0001:00005589* _dosret0_
+0001:00005590* _dosretax_
+0001:00005594  __set_errno_dos_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(umaskval)
+0002:00000500  ___umaskval
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(iomode)
+0001:00005605  __IOMode_
+0001:0000565a  __SetIOMode_
+0002:00000504+ ___NFiles
+0002:00000508+ ___init_mode
+0002:00000558+ __iomode
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(initfile)
+0001:0000566f  __InitFiles_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(ioexit)
+0001:000056e6  __full_io_exit_
+0001:000056f2* fcloseall_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fflush)
+0001:0000574f  fflush_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(unlnk)
+0001:0000575f  unlink_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(itoa)
+0001:000057a5+ utoa_
+0001:000057ef  itoa_
+0001:000057ef* _itoa_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(noefgfmt)
+0002:0000055c  ___EFG_printf
+0002:00000560* ___EFG_scanf
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(ltoa)
+0001:00005841  ultoa_
+0001:0000588b  ltoa_
+0001:0000588b* _ltoa_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(toupper)
+0001:000058a6  toupper_
+0001:000058a6* _toupper_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(stack386)
+0001:000058b4  stackavail_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(cinit)
+0001:000058bd  __CommonInit_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(___argc)
+0002:00000a58  ____Argc
+0002:00000a5c  ____Argv
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(exit)
+0001:00005926  __null_int23_exit_
+0001:00005927  exit_
+0001:0000593f+ _exit_
+0002:00000564+ ___atexit
+0002:00000568  ___int23_exit
+0002:0000056c  ___FPE_handler_exit
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(xmsg)
+0001:00005955* __exit_with_msg_
+0001:0000595a  __fatal_runtime_error_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(sigsy)
+0001:00005a84  __DPMI_hosted_
+0001:00005b18  __restore_int23_
+0001:00005cce  __restore_int_ctrl_break_
+0001:00005d06  __grab_int23_
+0001:00005e21  __grab_int_ctrl_break_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(enterdb)
+0001:00005f3c  __EnterWVIDEO_
+0002:0000058c+ ___WD_Present
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(signl)
+0001:00005f62+ __sigabort_
+0001:00005f6c  __sigfpe_handler_
+0001:00005fa1* signal_
+0001:00006056  raise_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(chint386)
+0001:00006118  _chain_intr_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(d_setvec)
+0001:00006131  _dos_setvect_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(d_getvec)
+0001:0000615e  _dos_getvect_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(abort)
+0001:00006190* abort_
+0001:00006196  __terminate_
+0002:000005c4  ___abort
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(grabfpe)
+0001:000061a8  __grab_fpe_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(grabfp87)
+0001:000061ad+ __GrabFP87_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fpe387)
+0002:000005c8  ___PMSeg
+0002:000005ca  ___PMAddr
+0002:000005ce  ___RMAddr
+0001:000061de  __Init_FPE_handler_
+0001:0000623b  __Fini_FPE_handler_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fpeinth)
+0001:00006298  __Enable_FPE_
+0001:000062ad  __FPEHandler_
+0001:000062ba  __FPE2Handler_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fpephar)
+0001:000064f8  __Phar_hook_init_
+0001:000065bb  __Phar_hook_fini_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fpedos4g)
+0001:000065e8  __DOS4G_hook_init_
+0001:00006615  __DOS4G_hook_fini_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fpeergo)
+0001:0000662e  __Ergo_hook_init_
+0001:0000666c  __Ergo_hook_fini_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fpeintel)
+0001:00006686  __Intel_hook_init_
+0001:000066de  __Intel_hook_fini_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(_8087386)
+0002:000007f0  __8087
+0002:000007f1  __real87
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fpeint)
+0002:000007f4  ___FPE_int
+0002:000007f5  ___IRQ_num
+0002:000007f6  ___IRQ_int
+0002:000007f7  ___MST_pic
+0002:000007f8* ___SLV_pic
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(chk8087)
+0001:000066e9+ __init_8087_
+0001:0000671a* _fpreset_
+0001:00006724  __chk8087_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(save8087)
+0002:000007fc  ___Save8087
+0002:00000800  ___Rest8087
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(8087cw)
+0002:00000804  __8087cw
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(ini87386)
+0001:00006770  __init_80x87
+
+
+                        +---------------------------+
+                        |   Unresolved References   |
+                        +---------------------------+
+
+Undefined Symbol                Referenced by
+================                =============
+
+char near drive[]               image13h.obj(C:\PROJEKTY\POLANIE.CD\image13h.cpp)
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+C:\jezyki\WATCOM\lib386\math387r.lib
+C:\jezyki\WATCOM\lib386\dos\clib3r.lib

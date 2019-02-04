@@ -1,0 +1,52 @@
+/**************************************************************************
+*** Plik  : OPERWAV.H                                                   ***
+*** Autor : Artur Bidzinski                                             ***
+*** Data  : 28 pazdziernika 1995r.                                      ***
+***************************************************************************
+*** Opis  : Plik definicyjny klase operujaca na strukturze WAV          ***
+**************************************************************************/
+
+#ifndef DEFINICJA_KLASY_OPERWAV
+#define DEFINICJA_KLASY_OPERWAV
+//#include "define.h"
+//#include "typepas.h"
+#include "wav.h"
+//#include "ems.h"
+#include "opiswava.h"
+
+class OPERWAV
+{
+    //static int Segment_Okna_EMS;
+    //void NAJBARDZIEJ_KRETYNSKA_FUNKCJA_ZAMIAST_KONSTRUKTORA(void);
+    public:
+
+    //OPERWAV(void);
+    //~OPERWAV(void);
+
+    private:
+    WAV   naglowek;
+    //char  nazwa[DLUGOSC_NAZWY_PLIKU];
+
+    //void TworzStructWAV(WAV*);
+    //int ZapiszWAVnaDysk(WAV*,char*,char*,long);
+
+    int Czytaj_naglowek_WAV(int);
+    int Naglowek_WAV_poprawny(void);
+    //int Zwolnij_pamiec(int);                // POPRAWIC!!!!!!!!!!!!!!!!!!
+    int Rezerwuj_pamiec_na_probki(opisWAVa*);
+
+    int Czytaj_probki_do_bufora(int,opisWAVa*);
+
+    // void Inicjuj_daneDMA(void);
+    // int Podaj_Okno_EMS(void);
+
+    public:
+    int ZaladujWAV_z_dysku(char*,opisWAVa*);
+// int Zwolnij_uchwyt(opisWAVa&);
+// int OdtwarzajWAV(byte,byte);
+// int Czy_mozna_odtwarzac_WAV(void);
+// char *tytul(void);
+
+    friend class MENEGERDMA;
+};
+#endif

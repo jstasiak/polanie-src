@@ -1,0 +1,2 @@
+cd.cpp(229): Warning! W389: (col 24) integral value may be truncated during assignment or initialization 
+cd.cpp(456): Warning! W389: (col 41) integral value may be truncated during assignment or initialization 

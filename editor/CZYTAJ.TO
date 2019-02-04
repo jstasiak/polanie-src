@@ -1,0 +1,145 @@
+
+
+   *******************************************************************
+
+   ********************     P  O  L  A  N  I  E     ******************
+
+   ********************     ver. 1.0 - Shareware    ******************
+
+   *******************************************************************
+
+
+
+   Spis tresci:
+
+   I.   Wymagania sprzetowe.
+   II.  Sterowanie.
+   III. Strategia.
+   IV.  Autorzy.
+
+   ------------------------------------------------------------------
+
+     Wszelkie uwagi prosimy przesylac na adres:
+
+        dymek@earth.ia.agh.edu.pl
+
+
+   -------------------------------------------------------------------
+   I. Wymagania sprzetowe.
+
+        Komputer 486SX-25Mz, 4MB RAM, 1MB HDD, VGA, mysz.
+
+   --------------------------------------------------------------------
+   II. Sterowanie
+
+        W trakcie gry dostepne sa trzy grupy polecen:
+     1) Rozkazy dla postaci,
+     2) Rozkazy dla zamku,
+     3) Rozkazy sterowania.
+
+     ad.1) Rozkazy dla postaci (dostepne po zaznaczeniu postaci).
+
+     Stoj - pierwsza ikonka (czerwony X ), lub klawisz "S" - postac
+            pozostaje na wskazanym miejscu, nie sciga przeciwnika
+            (postac z tym rozkazem wykonuje nerwowe ruchy w miejscu).
+
+     Idz - ikonka ze strzalka, lub klawisz "C". Kursor myszki zmienia
+           ksztalt na czerwone strzalki. Klikniecie na polu planszy
+           powoduje ze postac udaje sie w tamtym kierunku.
+           UWAGI:
+           -Postac zaatakowana przerywa marsz i rozpoczyna walke.
+           -Krowa zaatakowana ucieka do miejsca gdzie oddaje mleko.
+           -Jezeli postacia jest krowa, to po dojsciu na miejsce zaczyna
+            jesc trawe.
+           -Jezeli postacia jest krowa i kazemy jej isc do chaty, to
+            odtad w tej chacie bedzie ona oddawac mleko.
+
+     Atak - ikonka z lukiem,mieczami,ogniem lub klawisz "A". Kursor zmienia
+           ksztalt na skrzyzowane miecze. Po kliknieciu na cel ataku postac
+           przystepuje do walki.
+           UWAGI:
+           -Postacie atakuja automatycznie przeciwnika, ktory znajdzie sie
+            w polu widzenia.
+           -Mozna wydac rozkaz ataku na samego siebie (samobojstwo).
+           -Po wydaniu rozkazu ataku na las postac scina drzewa
+            (nie przynosi to dochodow, ale czasem sie przydaje).
+           -Mozna niszczyc chaty i grod przeciwnika.
+
+
+     ad.2) Rozkazy dla grodu (dostepne po zaznaczeniu grodu).
+
+           Po prawej stronie ekranu,znajduje sie duzy wskaznik informujacy
+           o stanie twoich zapasow mleka. Ma on naniesiona skale, na ktorej
+           zaznaczone sa moduly jakie mozesz zakupic za odpowiednia jego
+           ilosc.
+           Po zaznaczeniu zamku pojawiaja sie ikonki z mozliwymi zakupami.
+
+           Pierwsze 3 od gory: kaplan, lucznik, rycerz - pozwola ci wzmocnic
+           sily bojowe. Aby mozliwy byl ten zakup miejsce w lewym, gornym
+           rogu grodu musi byc puste!
+
+           Kolejna ikonka : krowa - zakup ten pozwoli uzyskiwac ci wieksze
+           ilosci mleka, a co za tym idzie szybsza rozbudowe grodu.
+
+           Chata - po wybraniu tej ikonki, kursor myszy zmienia ksztalt na
+           chate. Mozesz teraz wybrac miejsce gdzie ma ona stanac.
+           UWAGI:
+           Nie mozesz postawic chaty jezeli:
+           - nie masz mleka,
+           - miejsce jest zajete,
+           - miejsce jest nieodkryte.
+           Jezeli postawisz chatke na grodzie to nastapi jego odbudowa!
+
+
+     ad.3) Rozkazy sterowania.
+
+           Klawisz "M" wlacza i wylacza mape.
+           Przycisk MENU wlacza menu gry.
+           Trzeci przycisk myszy - kasuje aktualny rozkaz (zmienia kursor na
+           standardowy).
+           Przewijanie ekranu:
+                       - klawisze strzalek,
+                       - klikniecie na brzegach ekranu,
+                       - klikniecie na mapce.
+
+
+     -------------------------------------------------------------------------
+     III. Strategia.
+
+        Najprosciej mowiac nalezy miec krowy, aby miec mleko.
+        Nalezy miec mleko aby kupic wojsko.
+        Nalezy miec wojsko aby zniszczyc grod wroga.
+
+
+     -------------------------------------------------------------------------
+     IV. Autorzy
+
+       Glowny programista i koordynator:
+
+        Miroslaw Dymek
+
+       Drugi programista:
+
+        Bidzinski Artur
+
+       Grafika:
+
+        Chwaleba Pawel
+
+       Projekty plansz:
+
+        Lidia Dutkiewicz
+
+       Historia:
+
+        Brzuchacz Beata
+
+       Specjalne podziekowania:
+
+        Zbroinski Tomasz
+        Piwek Bartlomiej
+
+
+
+
+

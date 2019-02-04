@@ -1,0 +1,54 @@
+battle.cpp(484): Warning! W014: (col 1) no reference to symbol 'j' 
+battle.cpp(484): Note! N392: (col 1) 'int j' in 'void Battle( int )' defined in: battle.cpp(231) (col 7) 
+battle.cpp(581): Warning! W389: (col 58) integral value may be truncated during assignment or initialization 
+battle.cpp(581): Warning! W389: (col 65) integral value may be truncated during assignment or initialization 
+battle.cpp(582): Warning! W389: (col 62) integral value may be truncated during assignment or initialization 
+battle.cpp(582): Warning! W389: (col 69) integral value may be truncated during assignment or initialization 
+battle.cpp(583): Warning! W389: (col 62) integral value may be truncated during assignment or initialization 
+battle.cpp(583): Warning! W389: (col 69) integral value may be truncated during assignment or initialization 
+battle.cpp(584): Warning! W389: (col 66) integral value may be truncated during assignment or initialization 
+battle.cpp(584): Warning! W389: (col 73) integral value may be truncated during assignment or initialization 
+battle.cpp(786): Warning! W389: (col 75) integral value may be truncated during assignment or initialization 
+battle.cpp(786): Warning! W389: (col 82) integral value may be truncated during assignment or initialization 
+battle.cpp(790): Warning! W389: (col 79) integral value may be truncated during assignment or initialization 
+battle.cpp(790): Warning! W389: (col 86) integral value may be truncated during assignment or initialization 
+battle.cpp(794): Warning! W389: (col 79) integral value may be truncated during assignment or initialization 
+battle.cpp(794): Warning! W389: (col 86) integral value may be truncated during assignment or initialization 
+battle.cpp(798): Warning! W389: (col 83) integral value may be truncated during assignment or initialization 
+battle.cpp(798): Warning! W389: (col 90) integral value may be truncated during assignment or initialization 
+battle.cpp(812): Warning! W389: (col 56) integral value may be truncated during assignment or initialization 
+battle.cpp(812): Warning! W389: (col 63) integral value may be truncated during assignment or initialization 
+battle.cpp(849): Warning! W389: (col 69) integral value may be truncated during assignment or initialization 
+battle.cpp(849): Warning! W389: (col 76) integral value may be truncated during assignment or initialization 
+battle.cpp(858): Warning! W014: (col 1) no reference to symbol 'j' 
+battle.cpp(858): Note! N392: (col 1) 'int j' in 'void ShowSelected( void )' defined in: battle.cpp(490) (col 7) 
+battle.cpp(1251): Warning! W389: (col 33) integral value may be truncated during assignment or initialization 
+battle.cpp(1260): Warning! W389: (col 33) integral value may be truncated during assignment or initialization 
+battle.cpp(1261): Warning! W389: (col 33) integral value may be truncated during assignment or initialization 
+battle.cpp(1690): Warning! W389: (col 30) integral value may be truncated during assignment or initialization 
+battle.cpp(1699): Warning! W389: (col 34) integral value may be truncated during assignment or initialization 
+battle.cpp(1701): Warning! W389: (col 45) integral value may be truncated during assignment or initialization 
+battle.cpp(1702): Warning! W389: (col 45) integral value may be truncated during assignment or initialization 
+battle.cpp(1704): Warning! W389: (col 45) integral value may be truncated during assignment or initialization 
+battle.cpp(1705): Warning! W389: (col 45) integral value may be truncated during assignment or initialization 
+battle.cpp(1706): Warning! W389: (col 34) integral value may be truncated during assignment or initialization 
+battle.cpp(1706): Warning! W389: (col 55) integral value may be truncated during assignment or initialization 
+battle.cpp(1707): Warning! W389: (col 45) integral value may be truncated during assignment or initialization 
+battle.cpp(1708): Warning! W389: (col 45) integral value may be truncated during assignment or initialization 
+battle.cpp(1709): Warning! W389: (col 34) integral value may be truncated during assignment or initialization 
+battle.cpp(1709): Warning! W389: (col 56) integral value may be truncated during assignment or initialization 
+battle.cpp(1715): Warning! W389: (col 42) integral value may be truncated during assignment or initialization 
+battle.cpp(1730): Warning! W389: (col 34) integral value may be truncated during assignment or initialization 
+battle.cpp(1802): Warning! W389: (col 55) integral value may be truncated during assignment or initialization 
+battle.cpp(1802): Warning! W389: (col 67) integral value may be truncated during assignment or initialization 
+battle.cpp(2182): Warning! W389: (col 22) integral value may be truncated during assignment or initialization 
+battle.cpp(2183): Warning! W389: (col 17) integral value may be truncated during assignment or initialization 
+battle.cpp(2194): Warning! W389: (col 13) integral value may be truncated during assignment or initialization 
+battle.cpp(2195): Warning! W389: (col 13) integral value may be truncated during assignment or initialization 
+battle.cpp(2256): Warning! W389: (col 22) integral value may be truncated during assignment or initialization 
+battle.cpp(2257): Warning! W389: (col 22) integral value may be truncated during assignment or initialization 
+decision.cpp(210): Warning! W389: (col 21) integral value may be truncated during assignment or initialization 
+decision.cpp(210): Note! N393: (col 21) included from battle.cpp(3633) 
+decision.cpp(211): Warning! W389: (col 21) integral value may be truncated during assignment or initialization 
+decision.cpp(217): Warning! W389: (col 21) integral value may be truncated during assignment or initialization 
+decision.cpp(218): Warning! W389: (col 21) integral value may be truncated during assignment or initialization 

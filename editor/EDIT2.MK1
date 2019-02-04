@@ -1,0 +1,52 @@
+!define BLANK ""
+c:\projekty\edit.pol\edit.obj : c:\projekty\edit.pol\edit.cpp .AUTODEPEND
+ @c:
+ cd c:\projekty\edit.pol
+ *wpp386 edit.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -d2 -mf -5r -bt&
+=dos
+
+c:\projekty\edit.pol\graphics.obj : c:\projekty\edit.pol\graphics.cpp .AUTOD&
+EPEND
+ @c:
+ cd c:\projekty\edit.pol
+ *wpp386 graphics.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -d2 -mf -5r&
+ -bt=dos
+
+c:\projekty\edit.pol\image13h.obj : c:\projekty\edit.pol\image13h.cpp .AUTOD&
+EPEND
+ @c:
+ cd c:\projekty\edit.pol
+ *wpp386 image13h.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -d2 -mf -5r&
+ -bt=dos
+
+c:\projekty\edit.pol\main.obj : c:\projekty\edit.pol\main.cpp .AUTODEPEND
+ @c:
+ cd c:\projekty\edit.pol
+ *wpp386 main.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -d2 -mf -5r -bt&
+=dos
+
+c:\projekty\edit.pol\mouse.obj : c:\projekty\edit.pol\mouse.cpp .AUTODEPEND
+ @c:
+ cd c:\projekty\edit.pol
+ *wpp386 mouse.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -d2 -mf -5r -b&
+t=dos
+
+c:\projekty\edit.pol\world.obj : c:\projekty\edit.pol\world.cpp .AUTODEPEND
+ @c:
+ cd c:\projekty\edit.pol
+ *wpp386 world.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -d2 -mf -5r -b&
+t=dos
+
+c:\projekty\edit.pol\edit2.exe : c:\projekty\edit.pol\edit.obj c:\projekty\e&
+dit.pol\graphics.obj c:\projekty\edit.pol\image13h.obj c:\projekty\edit.pol\&
+main.obj c:\projekty\edit.pol\mouse.obj c:\projekty\edit.pol\world.obj .AUTO&
+DEPEND
+ @c:
+ cd c:\projekty\edit.pol
+ @%write edit2.lk1 NAME edit2
+ @%append edit2.lk1 FIL edit.obj,graphics.obj,image13h.obj,main.obj,mouse.ob&
+j,world.obj
+ @%append edit2.lk1 
+ *wlink SYS dos4g op m d all op st=16k op c op maxe=25 op q op symf @edit2.l&
+k1
+

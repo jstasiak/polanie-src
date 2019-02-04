@@ -1,0 +1,1195 @@
+WATCOM Linker Version 10.6
+Copyright by WATCOM International Corp. 1985, 1996. All rights reserved.
+Created on:       97/02/24 23:20:58
+Executable Image: pol2.exe
+creating a DOS/4G executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:00000000        0002dd50
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE                          0001:00000000   00000010
+_TEXT                  CODE                          0001:00000010   00028bf0
+_NULL                  BEGDATA        DGROUP         0002:00000000   00000004
+_AFTERNULL             BEGDATA        DGROUP         0002:00000004   00000000
+CONST                  DATA           DGROUP         0002:00000004   00001600
+CONST2                 DATA           DGROUP         0002:00001604   00000114
+_DATA                  DATA           DGROUP         0002:00001718   00003224
+XIB                    DATA           DGROUP         0002:0000493c   00000000
+XI                     DATA           DGROUP         0002:0000493c   00000042
+XIE                    DATA           DGROUP         0002:0000497e   00000000
+YIB                    DATA           DGROUP         0002:0000497e   00000000
+YI                     DATA           DGROUP         0002:0000497e   0000000c
+YIE                    DATA           DGROUP         0002:0000498a   00000000
+TIB                    DATA           DGROUP         0002:0000498a   00000000
+TI                     DATA           DGROUP         0002:0000498a   00000000
+TIE                    DATA           DGROUP         0002:0000498a   00000000
+DATA                   DATA           DGROUP         0002:0000498a   00000000
+DATA32                 DATA           DGROUP         0002:0000498c   0000011c
+CONST32                CONST          DGROUP         0002:00004aa8   00000000
+_BSS                   BSS            DGROUP         0002:00004aa8   000282a8
+BSS32                  BSS            DGROUP         0002:0002cd50   00000000
+STACK                  STACK          DGROUP         0002:0002cd50   00001000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: battle.obj(C:\PROJEKTY\POLANIE.CD\battle.cpp)
+0001:00000050  void near Battle( int )
+0001:000009b0+ void near ShowSelected()
+0001:00002070+ void near Scroll()
+0001:000022d0+ void near DispatchEvent()
+0001:00004b40+ void near InitBattle( int, int )
+0001:000070d0+ void near SubMenu()
+0001:000073c0+ void near Options()
+0001:00007cc0+ char near EndLevel()
+0001:00007fa0+ int near sSubMenu()
+0001:000082f0+ int near SaveGame()
+0001:00009140  int near LoadGame()
+0001:00009e20+ void near FindGrass( int, int, int near *, int near * )
+0001:00009f40+ void near DecisionB()
+0001:0000a130+ void near DecisionS()
+0001:0000a2c0+ void near Generator()
+0001:0000a420+ void near Attack()
+0001:0000a750+ void near Decision()
+0001:0000af00+ void near ZaznaczObiekt( int, int, int, int, int )
+0001:0000b8f0+ near Castle::Castle()
+0001:0000b8c0+ near Castle::~Castle()
+0001:0000b8a0+ near Building::Building()
+0001:0000b880+ near Building::~Building()
+0002:00004aa8  int near place[][66]
+0002:00008eb8  char near placeN[][66]
+0002:00009fbc  int near attack[][66]
+0002:0000e3cc+ char near endL
+0002:0000e3d0  int near drzewa0
+0002:0000e3d4+ int near debug
+0002:0000e3d8+ int near kody
+0002:0000e3dc+ int near scrollTimer
+0002:0000e3e0* int near JestSB
+0002:0000e3e4  int near irq
+0002:0000e3e8  int near port
+0002:0000e3ec  int near kanal
+0002:0000e3f0  int near PlaceUsed
+0002:0000e3f4  int near diff
+0002:0000e3f8+ int near master
+0002:0000e3fc  int near drzewa
+0002:0000e400  int near color1
+0002:0000e404  int near color2
+0002:0000e408+ char near xleczenie
+0002:0000e409+ char near yleczenie
+0002:0000e40a+ char near skroller1
+0002:0000e40c+ int near ile0
+0002:00001724+ char near FileName[][12]
+0002:00001754+ int near musik
+0002:00001758+ EditStr near E
+0002:000017ec+ int near chat
+0002:000017f0+ int near showAll
+0002:000017f4+ char near skroller
+0002:000017f8+ int near speed
+0002:000017fc  char near prowintion[]
+0002:00001818  char near prowintionInit[]
+0002:00001834+ int near Track[]
+0002:0000e410+ int near ile1
+0002:0000e414  char near prowintionA[]
+0002:0000e42d+ char near zaznaczanie
+0002:0000e42e+ char near grupa
+0002:0000e430+ int near rx1
+0002:0000e434+ int near rx2
+0002:0000e438+ int near ry1
+0002:0000e43c+ int near ry2
+0002:0000e440+ Command near Cmd[]
+0002:0000e470  Castle near castle[]
+0002:00022380* int near mouseDisabled
+0002:00022384+ int near quitLevel
+0002:00022388+ int near mouseP
+0002:0002238c+ int near mouseCounter
+0002:00022390+ int near mouseMode
+0002:00022394+ int near Map
+0002:00022398+ int near positioN[][2]
+0002:000224d8+ char near decisionFaza
+0002:000224dc+ char near cel1[]
+0002:00022524+ char near cel2[]
+0002:0002256a+ char near showcel
+0002:0002256c+ Plansza near pl
+0002:000225b0+ Mem near mem
+0002:000225ec  int near xpastw
+0002:000225f0  int near ypastw
+0002:000225f4+ SSelected near select
+0002:00022604+ char near posTT[][10][2]
+0002:000226cc  char near * near guzik[]
+0002:000226d8  char near * near lancuch[]
+0002:000226e0* int near quit
+0002:000226e4+ int near MVol
+0002:00001904+ int near mouseCommand
+0002:00001908+ char near dzwiek
+0002:00001909+ char near mowa
+0002:0000190a  char near MapY
+0002:0000190c+ int near ScreenX
+0002:00001910+ int near ScreenY
+0002:00001914+ SSelected near posT[]
+0002:000019fc+ int near atime[]
+0001:0000b7f0* void near RefreshScreen()
+0002:000226e8+ Mover1 near * near selectM
+0002:000226ec+ Building near * near selectB
+0002:000226f0+ int near licznik2
+Module: cd.obj(C:\PROJEKTY\POLANIE.CD\cd.cpp)
+0002:000226f4+ __sg4escd near cd
+0002:00022908+ REGS near re
+0002:00022924+ SREGS near se
+0002:00022930+ J4 near t
+0002:00022964+ volumeinfo near my_new_volume
+0002:00022970  int near track
+0002:00022974+ int near memisalloc
+0002:00022978+ short unsigned near Selector
+0002:0002297a+ short unsigned near Segment
+0002:00001a3c+ __84h6rsioctli_request near ioctli_request
+0002:00001a58+ __a9s0elioctli_request_vol near ioctli_request_vol
+0002:00001a74+ __4uac91device_status near device_status
+0002:00001a7c+ int unsigned near BufferSizeForCD
+0002:00001a80+ int near BigActiveCDAudio
+0002:00001a84+ int near ActiveCDAudio
+0002:00001a88+ int unsigned near smallVolume
+0002:00001a8c+ char unsigned near Volume
+0002:00001aa0+ __2fhc0kplay_request near play_request
+0002:00001ab8+ __5i7c3sstop_request near stop_request
+0001:0000b920  void near BigOffCDAudio()
+0001:0000b930  void near BigOnCDAudio()
+0001:0000b940  void near OffCDAudio()
+0001:0000b950  void near OnCDAudio()
+0001:0000b960  void near SetMaxTrack( int )
+0001:0000b970* int unsigned near red2hsg( int unsigned )
+0001:0000b9d0* void near AllocCDBuffer()
+0001:0000ba30* void near FreeCDBuffer()
+0001:0000ba60+ int near CallMSCDEX( void near *, int )
+0001:0000bb40* int near CheckError( short unsigned )
+0001:0000bb70* int near MakeIOCtliCall( void near *, int )
+0001:0000bbe0  int near InitCD()
+0001:0000be30* void near cd_set_volume( volumeinfo near * )
+0001:0000bec0  void near ReadNrOfTracks()
+0001:0000c1c0  int near StopPlaying()
+0001:0000c230  void near setVolume( int )
+0001:0000c370  int near PlayTrack( int )
+0001:0000c5f0  int near GetCurrentTrack()
+0001:0000c700  int near PlayNext()
+0001:0000c730  int near PlayPrevious()
+0001:0000c760  int near getVolume()
+0001:0000c770  void near CheckCD()
+0001:0000c8a0  void near DeInitCD()
+0002:0002297c+ int unsigned near LineAddress
+0002:00022980+ int unsigned near LineAddressTwo
+0002:00022984+ int near NrOfTracks
+0002:00022988+ int near FirstTrack
+0002:0002298c+ int near LastTrack
+Module: dpmi.obj(C:\PROJEKTY\POLANIE.CD\dpmi.cpp)
+0001:0000c910* int near Presence_DPMI()
+0001:0000c950* int near Presence_DPMI_in_real_mode()
+0001:0000c990  int near alloc_DOS_memory( short unsigned, short unsigned near &, short unsigned near & )
+0001:0000c9f0  int near free_DOS_memory( short unsigned )
+0002:00001ad4+ int near nie_ma_DPMI
+0002:00001ad8+ int near nie_ma_DPMI_w_trybie_rzeczywistym
+0002:00001adc* int near nie_ma_IPX
+0002:00022990+ REGS near r
+Module: graphics.obj(C:\PROJEKTY\POLANIE.CD\graphics.cpp)
+0002:000229ac  int near ExpColor[]
+0002:00022a24  int near LightRed
+0002:00022a28  int near Red
+0002:00022a2c+ int near DarkRed
+0002:00022a30  int near LightYellow
+0002:00022a34  int near Yellow
+0002:00022a38  int near DarkYellow
+0002:00022a3c  int near LightGreen
+0002:00022a40  int near Green
+0002:00022a44  int near DarkGreen
+0002:00022a48  int near LightBlue
+0002:00001ae0+ int near wstep[]
+0002:00001bb0+ int near vict[]
+0002:00001c80+ int near def[]
+0002:00001d50+ int near specjal[]
+0002:00001d58  int near Color1
+0001:0000ca30  int near GetMemory()
+0001:0000d540  void near InitPicture()
+0001:0000fd60  void near FreeMemory()
+0001:0000fd90  void near ShowPanel( int, int, int, int, int )
+0001:00010260  void near ShowMainMenu()
+0001:000102d0  void near ShowSubMenu()
+0001:00010430  void near ShowEndMenu()
+0001:00010550* void near ShowIntro()
+0001:000105c0  void near ShowBackground()
+0001:00010660  void near ShowText( int, int )
+0001:00010cb0  void near ShowPicture( int, int )
+0001:00010cf0* void near ShowPicture2( int )
+0001:00010d80* void near Haslo( char near *, char )
+0002:00022a4c  int near Blue
+0002:00022a50  int near DarkBlue
+0002:00022a54  int near LightGray
+0002:00022a58  int near Gray
+0002:00022a5c+ int near DarkGray
+0002:00022a60  int near LightBrown
+0002:00022a64  int near Brown
+0002:00022a68  int near DarkBrown
+0002:00022a6c+ void near * near memoryBuf
+0002:00022a70  char near * near drewno[]
+Module: image13h.obj(C:\PROJEKTY\POLANIE.CD\image13h.cpp)
+0002:00022a7c+ __iobuf near * near palettefile
+0002:00022a80+ __iobuf near * near graphicfile
+0002:00022a84  char near * near VirtualScreen
+0002:00022a88  char near * near RealVirtualScreen
+0002:00022a8c  char near * near rgb
+0002:00022a90+ char near * near Buffer330
+0002:00022a94+ char near * near Rgb
+0002:00022a98+ char near * near index[]
+0002:00022c04+ int near ClipX1
+0002:00022c08+ int near ClipY1
+0001:00010d90  int near InitVirtualScreen()
+0001:00010dc0  void near ClearScreen13h()
+0001:00010de0  void near ShowVirtualScreen()
+0001:00010e10  void near FreeVirtualScreen()
+0001:00010e30  void near SetScreen( int )
+0001:00010e60  void near Init13h()
+0001:00010ea0  int near InitBuffers13h()
+0001:00010ef0  void near FreeBuffers13h()
+0001:00010f30  void near Close13h()
+0001:00010f60  void near SetClippingArea13h( int, int, int, int )
+0001:00010f80  void near PutPixel13h( int, int, int )
+0001:00010fa0+ char near * near LoadImage13h( char near * )
+0001:00011050  int near LoadToScreen13h( int, int )
+0001:00011140* int near SaveImage256( char near *, char near * )
+0001:00011190  void near GetImage13h( int, int, int, int, char near * )
+0001:00011260  int near GetImageSize13h( int, int, int, int )
+0001:00011270  void near PutImage13h( int, int, char near *, int )
+0001:00011460  void near PutImageChange13h( int, int, char near *, int, char, char )
+0001:000115a0  void near PutImageChangeInverse13h( int, int, char near *, int, char, char )
+0001:00011700  void near Rectangle13h( int, int, int, int, int )
+0001:000118b0  void near Bar13h( int, int, int, int, int )
+0001:000119a0  int near InitText13h()
+0001:00011ba0+ char near Transform13h( char unsigned )
+0001:00011c10* void near ClearText13h()
+0001:00011c50  void near OutTextDelay13h( int, int, char near *, int, int, int )
+0001:00011d30  void near CenterText13h( int, int, int, int, char near *, int )
+0001:00011e50  void near OutText13h( int, int, char near *, int )
+0001:00011ee0  int near Write13h( int, int, int, int, char near *, int, int )
+0001:000122d0  void near OpenGraphicFile()
+0001:00012300  void near CloseGraphicFile()
+0001:00012310  void near OpenPaletteFile()
+0001:00012340  void near ClosePaletteFile()
+0001:00012350  void near LoadExtendedPalette( int )
+0001:000123a0* void near LoadPalette13h( char near * )
+0001:000123f0+ void near SetExtendedPalette()
+0001:00012460  void near DownPalette( int )
+0001:00012550  void near BlackPalette()
+0001:00012580  void near RisePalette( int )
+0002:00001dd4+ int near length[]
+0002:00001f40+ int near lineLength
+0002:00001f44+ int near ClipX2
+0002:00001f48+ int near ClipY2
+Module: ladowani.obj(C:\PROJEKTY\POLANIE.CD\ladowani.cpp)
+0001:00012670* void near Inst( char near *, MENEGERDMA near & )
+0001:000126b0+ int near ladowanie()
+0002:00022c10+ int near instal
+Module: main.obj(C:\PROJEKTY\POLANIE.CD\main.cpp)
+0002:00022c14  MENEGERDMA near SND
+0002:00022c18+ int near endGame
+0002:00022c1c  int near level
+0002:00022c20  char near * near picture[]
+0002:00023090  char near * near missiles[][3][3]
+0002:00023168* char near * near tlo
+0002:0002316c  char near * near Mysz[]
+0002:000231a0  char near * near movers[][13][3][3]
+0002:00023ac4  char near * near ramka[]
+0001:000127f0  main_
+0001:00012cd0+ void near MainMenuDispatchEvent()
+0001:00012e00  void near PressButton( int, int )
+0001:00012f60  void near MouseEngine()
+0001:00013130+ void near PokazOczy()
+0001:000131d0+ void near NewGame()
+0001:00013510* int near IsFile( char near * )
+0002:00001f58  char near drive[]
+0002:00023ad4  char near * near buttons[]
+0002:00023b14  char near * near dead[]
+0002:00023b20  char near * near Hit[]
+0002:00023b28  char near * near shadow
+0002:00023b2c* char near * near face[]
+0002:00023b6c  char near * near Buttons[]
+0002:00023b7c+ int near show
+Module: mapa.obj(C:\PROJEKTY\POLANIE.CD\mapa.cpp)
+0001:00013530+ void near DispatchMapEvent()
+0001:00013730  void near NextConquest()
+0002:00001f5c+ char near kolorK[][5]
+0002:00001f78+ int near wsp1[][4]
+0002:00002108+ int near wsp2[][2]
+0002:00023b80+ char near EndMap
+Module: menegdma.obj(C:\PROJEKTY\POLANIE.CD\menegdma.cpp)
+0001:00013e40  near MENEGERDMA::MENEGERDMA( int, int )
+0001:00013fb0  void near MENEGERDMA::Init( int, int, int, int )
+0001:000141d0  near MENEGERDMA::~MENEGERDMA()
+0001:000142c0+ void near MENEGERDMA::deInit()
+0001:00014390  int near MENEGERDMA::PlayWav( char near * )
+0001:00014400  void near MENEGERDMA::EndPlayWav()
+0001:00014460+ void far MENEGERDMA::NewTime()
+0001:00014490+ void far MENEGERDMA::NoweIRQ()
+0001:000145b0+ void far MENEGERDMA::NowaKlawiatura()
+0001:000146e0+ void near MENEGERDMA::daj_kanal()
+0001:000147a0+ int near MENEGERDMA::Rezerwuj_Pamiec( int )
+0001:00014830+ int near MENEGERDMA::ile_mozesz_miec_DMA()
+0001:00014860+ int near MENEGERDMA::ile_masz_DMA()
+0001:00014890  int near MENEGERDMA::InstalujWAV( char near * )
+0001:00014930+ int near MENEGERDMA::Czy_jest_wolny_uchwyt()
+0001:000149a0+ int near MENEGERDMA::Wolno_grac()
+0001:000149e0+ int near MENEGERDMA::Przerwano_DMA()
+0001:00014a10+ int near MENEGERDMA::Odtwarzaj( int )
+0001:00014ab0  int near MENEGERDMA::operator ()( int )
+0001:00014b20+ int near MENEGERDMA::Odtwarzaj_DMA()
+0001:00014d30+ int near MENEGERDMA::Odtwarzaj_WAVa( int )
+0001:00014e00+ void near MENEGERDMA::Przerwij_odtwarzanie_DMA()
+0002:00023bb0+ int near MENEGERDMA::MultiWav
+0002:00023bb4+ int near MENEGERDMA::DO_zagrania
+0002:00023bb8+ int near MENEGERDMA::ZAgrano
+0002:00023bbc+ void near * near MENEGERDMA::MaxSample
+0002:00023bc0+ void near * near MENEGERDMA::SamplesForSB
+0002:00023bc4+ void near * near MENEGERDMA::NewSamplesForSB
+0002:00023bc8+ void near * near MENEGERDMA::GlobalDataWAV
+0002:00023bcc+ int near MENEGERDMA::HiInterrupt
+0002:00023bd0+ int near MENEGERDMA::loaded
+0002:00023bd4  int near licznik
+0002:00023bd8+ int near MENEGERDMA::wartosc_maski_kanalu
+0002:00023bdc+ int near MENEGERDMA::wartosc_rejestru_trybu
+0002:00023be0+ int near MENEGERDMA::how_paragraphs
+0002:00023be4+ short unsigned near MENEGERDMA::Selector
+0002:00023be8+ int near MENEGERDMA::SegmentForSB
+0002:00023bec+ int near MENEGERDMA::Rejest_adresowy_kanalu
+0002:00023bf0+ int near MENEGERDMA::Rejest_licznika_kanalu
+0002:00023bf4+ int near MENEGERDMA::pamiec
+0002:00023bf8+ int near MENEGERDMA::PSP
+0002:00023bfc+ int near MENEGERDMA::koniecPSP
+0002:00023c00+ int near MENEGERDMA::max_ilosc_melodii_DMA
+0002:00023c04+ int near MENEGERDMA::ilosc_melodii_DMA
+0002:00023c08+ int near MENEGERDMA::ostatnio_wczytany
+0002:00023c0c+ int near MENEGERDMA::odtwarzany_uchwyt
+0002:00023c10  int near MENEGERDMA::jest_odtwarzany
+0002:00023c14+ int near MENEGERDMA::przerwano_DMA
+0002:00023c18+ opisWAVa near * near MENEGERDMA::WAVy
+0002:00023c1c+ int near MENEGERDMA::Jest_SB
+0002:00023c20+ int near MENEGERDMA::KanalDMA
+0002:00023c24+ int near MENEGERDMA::zawartosc_portow_DMA[]
+0002:00023c38+ int near MENEGERDMA::LMaskaIRQ
+0002:00023c3c+ int near MENEGERDMA::HMaskaIRQ
+0002:00023c40+ int near MENEGERDMA::NowaMaskaIRQ
+0002:00023c44+ void (far * near MENEGERDMA::OrginalneIRQ)()
+0002:00023c4c+ void (far * near MENEGERDMA::OrginalTimer)()
+0001:00014e60+ void near MENEGERDMA::Rozkaz_dla_SB( int )
+0001:00014f10  int near MENEGERDMA::LoadGlobalData( char near *, int )
+0001:00015060+ int near MENEGERDMA::ZaladujWAV_z_dysku( char near *, opisWAVa near * )
+0002:000021d0+ int near MENEGERDMA::dopuszczalny_kanal[]
+0002:000021e0+ int near MENEGERDMA::Rejest_strony_kanalu
+0002:000021e4+ int near MENEGERDMA::odtwarzaj_kazdy
+0002:000021e8+ int near MENEGERDMA::wolny_uchwyt
+0002:000021ec+ int near MENEGERDMA::IRQ
+0002:00023c54+ void (far * near MENEGERDMA::OrginalnaKlawiatura)()
+Module: mouse.obj(C:\PROJEKTY\POLANIE.CD\mouse.cpp)
+0001:00015120  int near Mouse::Ile( int )
+0001:00015150* void near Mouse::TButtonUp()
+0001:000151b0  void near Mouse::GButtonUp()
+0001:00015210* int near Mouse::GGetMsg()
+0001:00015280  int near Mouse::GetMsg13h()
+0001:00015330* int near Mouse::TGetMsg()
+0001:000153b0  int near Mouse::MWindow( int, int, int, int )
+0001:000153e0* void near Mouse::GMouseTrap( int, int, int, int )
+0001:000153e0* void near Mouse::TMouseTrap( int, int, int, int )
+0001:000153e0* void near Mouse::GMWindow( int, int, int, int )
+0001:000153e0* void near Mouse::TMWindow( int, int, int, int )
+0001:000153f0  int near Mouse::MouseInit()
+0001:00015420* void near Mouse::HideCursor()
+0001:00015420* void near Mouse::ShowCursor()
+0001:00015420* void near Mouse::TextCursor()
+0001:00015430* void near Mouse::TReadMouse()
+0001:00015480* void near Mouse::GReadMouse()
+0001:000154d0  void near Mouse::ReadMouse13h()
+0001:00015520* void near Mouse::TMoveCursor( int, int )
+0001:00015530  void near Mouse::GMoveCursor( int, int )
+0001:00015560* void near Mouse::SetCursorMask( int near *, int, int )
+0001:00015560* void near Mouse::SetMouseSensitiv( int, int )
+0001:00015560* void near Mouse::SetMouseSpeed( int )
+0001:00015560* void near Mouse::GMCounter( int near &, int near & )
+0001:00015560* void near Mouse::TMCounter( int near &, int near & )
+0002:00023c5c  Mouse near mouse
+Module: mover1.obj(C:\PROJEKTY\POLANIE.CD\mover1.cpp)
+0001:0001d1f0+ abs_
+0001:00015570  int near Who( int )
+0001:000155f0+ int near Type( int )
+0001:00015700  Mover1 near * near Pointer( int )
+0001:000157e0+ void near NewCow( int )
+0001:00015cd0+ void near FindCow( int, int, int near *, int near * )
+0001:00015ff0  void near FindEnemy( int, int, int near *, int near *, int near * )
+0001:000162a0+ void near FindHolyPlace( int near *, int near * )
+0001:000165a0+ void near Missile::Init( int, int, int, int, int, int )
+0001:00016920+ void near Missile::Move()
+0001:00017100+ void near Missile::Show( int, int )
+0001:00017230* void near Mover1::SetStart( int, int )
+0001:00017240* void near Mover1::Disable()
+0001:00017260  void near Mover1::Init( int, int, int, int, int )
+0001:00017370  near Mover1::Mover1()
+0001:000173b0  near Mover1::~Mover1()
+0001:000173c0  void near Mover1::SetNr( int )
+0001:000173d0  void near Mover1::SetTarget( int )
+0001:00017480  void near Mover1::SetIFF( int )
+0001:000174d0  void near Mover1::SetCommand( int )
+0001:00017530+ void near Mover1::Labeling()
+0001:00017f40+ void near Mover1::Move()
+0001:00018380+ int near Mover1::LookAround()
+0001:000188d0+ int near Mover1::LokateTarget()
+0001:00018970* int near Mover1::Distance()
+0001:000189a0+ void near Mover1::Attack()
+0001:00018f70+ void near Mover1::Repare()
+0001:00019170* void near Mover1::Run()
+0001:00019180+ void near Mover1::Run1()
+0001:00019dd0+ int near Mover1::Milk()
+0001:00019e50+ void near Mover1::FindGrass()
+0001:0001a040+ void near FindSheed( int, int, int, int near *, int near * )
+0001:0001a130+ void near Mover1::Graze()
+0001:0001a240+ void near Mover1::Run2()
+0001:0001a660  void near Mover1::SetEnd( int, int )
+0001:0001a820+ void near Mover1::Prepare( int, int, int )
+0001:0001ab60+ void near Mover1::ShowS()
+0001:0001b0e0  void near Mover1::Show()
+0001:0001b1e0* void near Mover1::Hide()
+0001:0001b220  void near Building::Init( int, int, int, int, int )
+0001:0001b550+ void near Building::Run()
+0001:0001bd50* void near Building::Prepare( int, int, int )
+0001:0001bd90+ void near Building::ShowS( int, int, int )
+0001:0001be20* void near Building::Rebuild()
+0001:0001be30  int near Building::Wynik( int )
+0001:0001bf30* int near Building::Milk()
+0001:0001bf90+ int near Building::NewMan( int )
+0001:0001c340  void near Castle::Init( int, int )
+0001:0001c400  void near Castle::ShowS( int, int, int )
+0001:0001c520  void near Castle::Prepare( int, int, int )
+0001:0001c610* void near Castle::GetCmd( Command near * )
+0001:0001c650  void near Castle::SetCmd( Command near * )
+0001:0001c690  void near Castle::Run()
+0001:0001d0d0  void near Castle::DisableUnits()
+0001:0001d150  void near Castle::FreeUnits()
+0002:000021f0  int near Udata[][7]
+0002:0000235c+ int near ddamage[]
+0002:00002398+ int near darmour[]
+0002:000023d4+ int near dmagic[]
+0002:00002410+ char near shiftX[][17]
+0002:000024f0+ char near shiftY[][17]
+0002:000025d0+ char near Phase[][19]
+0002:00023c74+ int near Place[][66]
+0002:00028084  MMessage near Msg
+Module: opiswava.obj(C:\PROJEKTY\POLANIE.CD\opiswava.cpp)
+0001:0001d200  void near opisWAVa::Init_opisWAVa()
+0001:0001d200  near opisWAVa::opisWAVa()
+0001:0001d230  void near opisWAVa::ZwolnijUchwyt()
+Module: playfli.obj(C:\PROJEKTY\POLANIE.CD\playfli.cpp)
+0001:0001d280* void near init_timer()
+0001:0001d2a0* void near deinit_timer()
+0001:0001d2c0* long near read_timer()
+0001:0001d330* void near start_timer()
+0001:0001d3b0* void near wait_timer( int )
+0001:0001d460  int near play( char near * )
+0001:0001d8e0* void near fli_color()
+0001:0001d9a0+ void near fli_lc()
+0001:0001daf0* void near fli_black()
+0001:0001db10+ void near fli_brun()
+0001:0001dc30* void near fli_copy()
+0001:0001dc60* void near wait_sync()
+0001:0001dc80* void near move_palette()
+0001:0001dcd0* void near move_screen()
+0001:0001dd00* int near check_escape()
+0002:000026c8+ char unsigned near * near screen
+0002:000280cc+ char unsigned near * near source
+0002:000280d0+ char unsigned near pal[]
+0002:000283d0+ char unsigned near * near source_ptr
+0002:000283d4+ long near timer_delay
+0002:000283d8* long near timer_stop
+0002:000283dc+ long near startTime
+Module: world.obj(C:\PROJEKTY\POLANIE.CD\world.cpp)
+0001:0001dd50  void near ShowPlace( int, int )
+0001:0001e8a0  void near ShowTrees( int, int )
+0001:0001ef40  void near ClearAttack()
+0001:0001f440  void near ShowBattleMap( int, int )
+0001:0001f750  void near Droga( int, int, int )
+0001:0001fa00  void near Woda( int, int, int )
+0002:000026cc  int near Xe[]
+0002:0000271c  int near Ye[]
+0002:0000275c+ int near maskaT[]
+0002:000283e0  int near placeG[][66]
+0002:0002c7f0+ int near grassCounter
+0002:0002c7f4+ int near waterCounter
+0002:0002c7f8+ int near fireCounter
+0002:0002c7fc+ int near kol[]
+0002:0002c80c  char near * near fire[]
+0002:0002c844  char near * near tree[]
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(stabmod)
+0001:0001fd70  __wcpp_2_module_dtor__
+0001:0001fde7  __wcpp_2_mod_register__
+0002:0000494e* rt_init __based("XI") __wcpp_2_data_stab_init_mod_
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(stabact)
+0001:0001fdf8  __wcpp_2_ctor_array__
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(sprintf)
+0001:0001fe53  sprintf_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fopen)
+0001:0001fe83+ __open_flags_
+0001:00020018+ _fsopen_
+0001:00020051  fopen_
+0001:000200c3* freopen_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(exit)
+0001:00020105  __null_int23_exit_
+0001:00020106  exit_
+0001:0002011e+ _exit_
+0002:000027a8+ ___atexit
+0002:000027ac  ___int23_exit
+0002:000027b0  ___FPE_handler_exit
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fgetc)
+0001:00020134  fgetc_
+0001:000201bd+ __filbuf_
+0001:000201ec  __fill_buffer_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fclose)
+0001:00020298  fclose_
+0001:000202c5  __shutdown_stream_
+0001:000202e6+ __MkTmpFile_
+0001:0002034b  __doclose_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(printf)
+0001:000203db  printf_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fseek)
+0001:0002043f  fseek_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fread)
+0001:0002053b  fread_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(delay386)
+0001:00020716  delay_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(nmalloc)
+0001:0002071b  _nmalloc_
+0001:0002071b  malloc_
+0002:000027b4  ___nheapbeg
+0002:000027b8  ___MiniHeapRover
+0002:000027bc  ___LargestSizeB4MiniHeapRover
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(nfree)
+0001:000207fe  _nfree_
+0001:000207fe  free_
+0002:0002c87c  ___MiniHeapFreeRover
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fwrite)
+0001:00020880  fwrite_
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(stabadt)
+0001:00020a40  __wcpp_2_dtor_array__
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(undefed)
+0001:00020a70  __wcpp_2_undefed_cdtor__
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(moddtorr)
+0002:0000497e  ___wcpp_2_data_module_dtor_ref_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(intx386)
+0001:00020a84  int386x_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(int386)
+0001:00020a9d  int386_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(set386)
+0001:00020ac0  memset_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(cprintf)
+0001:00020ae7* vcprintf_
+0001:00020afc  cprintf_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(getch)
+0001:00020b22  getch_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(clearscrr)
+0001:00020b3f+ _L2clearscreen_
+0001:00020c0a  _clearscreen_
+0001:00020c8a+ _GrClear_
+0001:00020ce8+ _TxtClear_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(bkcolorr)
+0001:00020da7* _getbkcolor_
+0001:00020dad  _setbkcolor_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(textcolr)
+0001:00020e1e+ _gettextcolor_
+0001:00020e4f  _settextcolor_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(cstrt386)
+0001:00000003* ___begtext
+0002:00000000* __nullarea
+0002:000027c0* __GDAptr
+0002:000027c4* __D16Infoseg
+0002:000027c6  __x386_zero_base_selector
+0001:00020ea4  _cstart_
+0001:00021133  __exit_
+0001:00021135  __do_exit_with_msg__
+0001:00021170  __GETDS
+0001:00021170  ___GETDSStart_
+0001:0002117b  ___GETDSEnd_
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(undefmbr)
+0001:0002117c  __wcpp_2_undefined_member_function__
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(d_getvec)
+0001:0002118e  _dos_getvect_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(d_setvec)
+0001:000211c0  _dos_setvect_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(inp)
+0001:000211ed  inp_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(outp)
+0001:000211f5  outp_
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(opnewarr)
+0001:00021200  void near * near operator new []( int unsigned )
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(memcpy)
+0001:00021205  memcpy_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(ftell)
+0001:0002122a  ftell_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(kbhit)
+0001:0002126c  kbhit_
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(fchop)
+0001:00021284  __CHP
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fltused)
+0000:00000000  _fltused_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(_8087386)
+0002:000027c8  __8087
+0002:000027c9  __real87
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(cppdata)
+0002:0002c880  __wint_thread_data
+0002:0002c8a0* ___wcpp_2_data_catch_completed_
+0002:0002c8a4  ___wcpp_2_data_dtreg_vfptrs_
+0002:0002c8b8* __compiled_under_generic
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(prwdata)
+0002:000027cc* __wint_pure_error_flag
+0002:000027ce* __wint_undef_vfun_flag
+0002:000027d0  __wint_module_init
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(stabdtor)
+0001:00021468  __wcpp_2_destruct_internal__
+0001:00021472  __wcpp_2_destruct_all__
+0001:00021474* __wcpp_2_destruct__
+0001:00021486* __wcpp_2_destruct_after_all__
+0001:00021488* __wcpp_2_destruct_after__
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(stabarr)
+0001:000214c5  __wcpp_2_arr_register__
+0002:00004966* rt_init __based("XI") __wcpp_2_data_stab_init_arr_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(prtf)
+0001:000214f5  __prtf_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(tolower)
+0001:000220d3  tolower_
+0001:000220d3* _tolower_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(seterrno)
+0001:000220e1  __set_EDOM_
+0001:000220e6  __set_errno_
+0001:000220f2  __set_ERANGE_
+0001:000220f9* __set_EINVAL_
+0001:00022109  __set_doserrno_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(iob)
+0002:000027e0  ___iob
+0002:000029e8* ___tmpfnext
+0002:000029e9  __fmode
+0002:0002c8bc  ___ClosedStreams
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(open)
+0001:00022115* open_
+0001:00022139  sopen_
+0001:00022322* __set_binary_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(allocfp)
+0001:00022387  __allocfp_
+0001:0002242d  __freefp_
+0001:00022466  __purgefp_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(chktty)
+0001:00022484  __chktty_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(stinit)
+0002:0002c8c0  ___OpenStreams
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(ioalloc)
+0001:000224b6  __ioalloc_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(flushall)
+0001:0002252d  flushall_
+0001:00022532  __flushall_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(gtche)
+0001:00022561  getche_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(qread)
+0001:0002257e  __qread_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(gtpid)
+0001:0002259d  getpid_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(flush)
+0001:000225a3  __flush_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(lseek)
+0001:0002267c  lseek_
+0001:0002267c* _lseek_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(_clse)
+0001:000226bf  __close_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(remove)
+0001:000226f4  remove_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fprtf)
+0001:0002270a  __fprtf_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(tell)
+0001:00022789  tell_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(delay)
+0001:0002279a  __delay_init_
+0001:000227cc  __delay_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(memalloc)
+0001:00022802  __MemAllocator
+0001:000228aa  __MemFree
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(grownear)
+0001:00022a06+ __FreeDPMIBlocks_
+0001:00022a62* __ReAllocDPMIBlock_
+0001:00022bd5+ __LastFree_
+0001:00022da6  __ExpandDGROUP_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(nmemneed)
+0001:00022f6f  __nmemneed_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(heapmod)
+0002:0002c8c8  ___nheap_clean
+0002:0002c8c9* ___fheap_clean
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(qwrit)
+0001:00022f72  __qwrite_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(errno)
+0001:00022fe6  __get_errno_ptr_
+0001:00022fec  __get_doserrno_ptr_
+0002:0002c8cc+ _errno
+0002:0002c8d0+ __doserrno
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fputc)
+0001:00022ff2  fputc_
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(fatalerr)
+0001:00023098  __wcpp_2_fatal_runtime_error__
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(intxa386)
+0001:000230b6  __int386x_
+0001:00023113* _DoINTR_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(segread)
+0001:00023494  segread_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(__stos)
+0001:000234c0  __STOSB
+0001:000234f7* __STOSD
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(putch)
+0001:00023563  putch_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(crwd386)
+0002:00002a04  __psp
+0002:00002a2f  __osmajor
+0002:00002a30  __osminor
+0002:00002a26  __Extender
+0002:00002a27  __ExtenderSubtype
+0002:00002a28  __X32VM
+0002:00002a08* __x386_stacklow
+0002:000029fc  __LpCmdLine
+0002:00002a00  __LpPgmName
+0002:000029f4  __dynend
+0002:000029f8  __curbrk
+0002:00002a08  __STACKLOW
+0002:00002a0c  __STACKTOP
+0002:00002a10  __ASTACKSIZ
+0002:00002a14  __ASTACKPTR
+0002:00002a18  __cbyte
+0002:00002a1c* __cbyte2
+0002:00002a20  __child
+0002:00002a29  __Envptr
+0002:00002a2d  __Envseg
+0002:00002a24  __no87
+0002:00002a31  __FPE_handler
+0002:00002a31  ___FPE_handler
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(globalr)
+0002:0002c8d4* __SetVGAPage
+0002:0002c8d8  __Screen
+0002:0002c8e4  __TextPos
+0002:0002c8e8  __ConfigBuffer
+0002:0002c922  __DBCSPairs
+0002:0002c92c  __SVGAType
+0002:0002c92e  __StackSeg
+0002:0002c930  __DefMode
+0002:0002c932  __DefTextRows
+0002:0002c934  __CursorShape
+0002:0002c936  __Tx_Col_Min
+0002:0002c938  __Tx_Row_Max
+0002:00002a38  __StartUp
+0002:00002a39  __GrMode
+0002:00002a3a  __ErrorStatus
+0002:00002a3c* __CurrPos
+0002:00002a40* __LogOrg
+0002:00002a44* __Clipping
+0002:00002a45  __CharAttr
+0002:00002a46* __Wrap
+0002:00002a48  __CursState
+0002:00002a4a  __GrCursor
+0002:00002a4c  __CurrActivePage
+0002:00002a4e* __CurrVisualPage
+0002:00002a50  __CurrBkColor
+0002:00002a54  __CurrColor
+0002:00002a56* __Palette
+0002:00002a58  __FillMask
+0002:00002a60  __DefMask
+0002:00002a68  __HaveMask
+0002:00002a69* __Transparent
+0002:00002a6b  __PaRf_x
+0002:00002a6d  __PaRf_y
+0002:00002a6f  __LineStyle
+0002:00002a71* __StyleWrap
+0002:00002a73  __PlotAct
+0002:00002a75* __TextSettings
+0002:00002a85* __CurrFont
+0002:00002a89* __ArcInfo
+0002:00002aa9* __CurrPos_w
+0002:00002ab9* __Window
+0002:00002acb  __BiosSeg
+0002:00002acd  __MonoSeg
+0002:00002acf  __CgaSeg
+0002:00002ad1  __EgaSeg
+0002:00002ad3  __RomSeg
+0002:00002ad5  __BiosOff
+0002:00002ad9  __MonoOff
+0002:00002add  __CgaOff
+0002:00002ae1  __EgaOff
+0002:00002ae5  __RomOff
+0002:00002ae9* __CurrState
+0002:0002c93a  __Tx_Col_Max
+0002:0002c93c  __Tx_Row_Min
+0002:0002c93e* __VGAPage
+0002:0002c93f* __VGAGran
+0002:0002c940  __IsDBCS
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(textposr)
+0001:00023573+ _gettextposition_
+0001:000235a5  _settextposition_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(getconfr)
+0001:0002363d* _getvideoconfig_
+0001:0002365f+ _CalcNumPages_
+0001:000236d4+ _GetState_
+0001:00023800  _InitState_
+0001:00023889* _GrInit_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(cursorr)
+0001:000238fa  _CursorOn_
+0001:00023928  _CursorOff_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(devutilsr)
+0001:00023a55  _GraphMode_
+0001:00023a79* _GrProlog_
+0001:00023a9d  _GrEpilog_
+0001:00023aae* _InitDevice_
+0001:00023aba* _FiniDevice_
+0001:00023ac3  _StartDevice_
+0001:00023acc  _ResetDevice_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(plotactnr)
+0001:00023ae5+ _getplotaction_
+0001:00023b11  _setplotaction_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(fillmaskr)
+0001:00023b62  _getfillmask_
+0001:00023b8c  _setfillmask_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(colorr)
+0001:00023c03  _getcolor_
+0001:00023c0a  _setcolor_
+0001:00023c28+ _L2setcolor_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(l1blockr)
+0001:00023c46  _L1Block_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(cnvcolorr)
+0001:00023c8f  _CnvColour_
+0002:00002b48+ __VGA_Colours
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(remappalr)
+0001:00023cb2  _remappalette_
+0001:00023d02+ _RemapNum_
+0001:00023d3f* _remapallpalette_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(cmain386)
+0001:00023ea3  __CMain
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(inirt386)
+0001:00023ef2  __InitRtns
+0001:00023f3d  __FiniRtns
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(seg386)
+0000:00001234  __DOSseg__
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(opnew)
+0001:00023f8c  void near * near operator new( int unsigned )
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fflush)
+0001:00023fd7  fflush_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(setefg)
+0001:00023fe7  __setEFGfmt_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(chk8087)
+0001:0002400b+ __init_8087_
+0001:0002403c* _fpreset_
+0001:00024046  __chk8087_
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(stabtrav)
+0001:00024090  __wcpp_2_stab_entry__
+0001:000240be  __wcpp_2_stab_trav_init__
+0001:000240df  __wcpp_2_stab_trav_comp__
+0001:000240e4  __wcpp_2_stab_trav_next__
+0001:00024169  __wcpp_2_stab_trav_move__
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(stabthrw)
+0001:00024213  __wcpp_2_corrupted_stack__
+0001:0002454f* __wcpp_2_catch_done__
+0001:000247a9+ __wcpp_2_dispatchable__
+0001:00024802+ __wcpp_2_save_exc__
+0001:00024880+ __wcpp_2_dispatch__
+0001:00024978* __wcpp_2_rethrow__
+0001:00024988* __wcpp_2_throw__
+0001:00024992* __wcpp_2_throw_zero__
+0002:00004972+ ___wcpp_2_data_init_longjmp_
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(tssize)
+0001:00024ab4  __wcpp_2_ts_size__
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(stabreg)
+0001:00024af8  __wcpp_2_base_register__
+0001:00024b11* __wcpp_2_base_deregister__
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(itoa)
+0001:00024b43+ utoa_
+0001:00024b8d  itoa_
+0001:00024b8d* _itoa_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(noefgfmt)
+0002:00002b8c  ___EFG_printf
+0002:00002b90  ___EFG_scanf
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(ltoa)
+0001:00024bdf  ultoa_
+0001:00024c29  ltoa_
+0001:00024c29* _ltoa_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(toupper)
+0001:00024c44  toupper_
+0001:00024c44* _toupper_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(isatt)
+0001:00024c52  isatty_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(dosret)
+0001:00024c79* _dosret0_
+0001:00024c80* _dosretax_
+0001:00024c84  __set_errno_dos_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(umaskval)
+0002:00002ba8  ___umaskval
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(iomode)
+0001:00024cf5  __IOMode_
+0001:00024d4a  __SetIOMode_
+0002:00002bac+ ___NFiles
+0002:00002bb0+ ___init_mode
+0002:00002c00+ __iomode
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(initfile)
+0001:00024d5f  __InitFiles_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(ioexit)
+0001:00024dd6  __full_io_exit_
+0001:00024de2* fcloseall_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(unlnk)
+0001:00024e3f  unlink_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(minreal)
+0002:0002c944  ___minreal
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(heapen)
+0001:00024e60* _heapenable_
+0002:00002c04  ___heap_enabled
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(sbrk386)
+0001:00024e70* sbrk_
+0001:00024f38  __brk_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(amblksiz)
+0002:00002c08  __amblksiz
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(enterdb)
+0001:00025003  __EnterWVIDEO_
+0002:00002c0c+ ___WD_Present
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(xmsg)
+0001:00025029  __exit_with_msg_
+0001:0002502e  __fatal_runtime_error_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(std)
+0002:00002c10  __StdFont
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(sysmtyper)
+0001:0002504b  _SysMonType_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(seginitr)
+0001:00025304  _InitSegments_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(l1liner)
+0001:000253f8  _L1SLine_
+0001:00025439* _L1Line_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(l1fillr)
+0001:000255ba  _L1Fill_
+0001:00025690* _L1ClipFill_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(fast256r)
+0001:000256d5  _FastMap_
+0001:0002577e  _RMAlloc_
+0001:00025804  _RMFree_
+0001:00025833  _RMInterrupt_
+0001:000258ec  _RMInterrupt2_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(stack386)
+0001:00025979  stackavail_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(cinit)
+0001:00025982  __CommonInit_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(___argc)
+0002:0002c948  ____Argc
+0002:0002c94c  ____Argv
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(efgfmt)
+0001:000259eb  _EFG_Format_
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(cnvs2d)
+0001:00025b34  __cnvs2d_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(save8087)
+0002:00003638  ___Save8087
+0002:0000363c  ___Rest8087
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(8087cw)
+0002:00003640  __8087cw
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(ini87386)
+0001:00025b44  __init_80x87
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(bittest)
+0001:00025b6c  __wcpp_2_bit_test__
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(callterm)
+0001:00025b8c  __wcpp_2_call_terminate__
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(tsequiv)
+0001:00025b9d  __wcpp_2_ts_equiv__
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(callunex)
+0001:00025bf0  __wcpp_2_call_unexpected__
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(stjmp386)
+0001:00025bf6* _setjmp_
+0001:00025c2b  longjmp_
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(allocexc)
+0001:00025cb0  __wcpp_2_alloc_exc__
+0001:00025deb  __wcpp_2_free_exc__
+0001:00025e18  __wcpp_2_pop_exc__
+0001:00025e27  __wcpp_2_push_exc__
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(ljmphdl)
+0002:0000364c  ___longjmp_handler
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(svgainfor)
+0001:00025e35  _SuperVGAType_
+0001:0002626f* _SetSVGAType_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(l1clipr)
+0001:00026276+ _L1OutCode_
+0001:0002631d  _L0LineClip_
+0001:0002650b* _L0BlockClip_
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(l0drwlinr)
+0001:00026588  _L0DrawLine_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(sigsy)
+0001:00026852  __DPMI_hosted_
+0001:000268e6  __restore_int23_
+0001:00026a9c  __restore_int_ctrl_break_
+0001:00026ad4  __grab_int23_
+0001:00026bef  __grab_int_ctrl_break_
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(ftos)
+0001:00026d0a* _SetMaxPrec_
+0001:00026e87  _FtoS_
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(strtod)
+0001:000270c1  strtod_
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(termnate)
+0001:000272b4  void near terminate()
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(unexpect)
+0001:00027300  void near unexpected()
+Module: C:\jezyki\WATCOM\lib386\plib3r.lib(areaexc)
+0002:00003670  ___EXC_AREA
+Module: C:\jezyki\WATCOM\lib386\dos\graph.lib(gstklowr)
+0001:00027334  _GetStackLow_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(signl)
+0001:0002733a+ __sigabort_
+0001:00027344  __sigfpe_handler_
+0001:00027379* signal_
+0001:0002742e  raise_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(chint386)
+0001:000274f0  _chain_intr_
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(nan_inf)
+0001:00027509  __Nan_Inf_
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(log387)
+0001:000275e7* log_
+0001:000275ff* log2_
+0001:000275f3* log10_
+0001:0002759c* IF@LOG
+0001:0002759c* IF@DLOG
+0001:000275df* IF@LOG2
+0001:000275df* IF@DLOG2
+0001:000275e3* IF@LOG10
+0001:000275e3  IF@DLOG10
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(floor)
+0001:0002760b  floor_
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(scale)
+0001:00027647+ _Scale_
+0001:00027688  _Scale10V_
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(cvt)
+0001:000277a5  __cvt_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(amodf386)
+0001:00027982* __ModF
+0001:00027a12  __ZBuf2F
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(hugeval)
+0002:000016a4  __HugeValue
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(abort)
+0001:00027aae* abort_
+0001:00027ab4  __terminate_
+0002:000046a4  ___abort
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(grabfpe)
+0001:00027ac6  __grab_fpe_
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(log87e)
+0001:00027acb  __log87_err_
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(modf387)
+0001:00027b08  modf_
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(i64ts386)
+0001:00027b22  __CmpBigInt
+0001:00027b5c  __Rnd2Int
+0001:00027bc7  __Bin2String
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(fpow10)
+0002:000016ac  __BigPow10Table
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(chipvar)
+0002:000046a8  ___chipbug
+0002:000046a8  __chipbug
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(chipd32)
+0001:00027dff* __fdiv_fpr
+0001:000282c1* __fdiv_chk
+0001:000282d4* __fdiv_m32
+0001:00028320  __fdiv_m64
+0001:0002836c* __fdiv_m32r
+0001:000283b8* __fdiv_m64r
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(frexp)
+0001:00028404  frexp_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(grabfp87)
+0001:00028473  __GrabFP87_
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(math2err)
+0001:000284a4  __math1err_
+0001:000284ae+ __math2err_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(chipbug)
+0001:00028589  verify_pentium_fdiv_bug_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fpe387)
+0002:00004708  ___PMSeg
+0002:0000470a  ___PMAddr
+0002:0000470e  ___RMAddr
+0001:000285de  __Init_FPE_handler_
+0001:0002863b  __Fini_FPE_handler_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fpeinth)
+0001:00028698  __Enable_FPE_
+0001:000286ad  __FPEHandler_
+0001:000286ba  __FPE2Handler_
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(_matherr)
+0001:000288f8* _set_matherr_
+0001:000288fe+ __rterrmsg_
+0001:00028946  _matherr_
+0002:00004930+ __RWD_matherr
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fpephar)
+0001:00028976  __Phar_hook_init_
+0001:00028a39  __Phar_hook_fini_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fpedos4g)
+0001:00028a66  __DOS4G_hook_init_
+0001:00028a93  __DOS4G_hook_fini_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fpeergo)
+0001:00028aac  __Ergo_hook_init_
+0001:00028aea  __Ergo_hook_fini_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fpeintel)
+0001:00028b04  __Intel_hook_init_
+0001:00028b5c  __Intel_hook_fini_
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(__mtherr)
+0001:00028b5e  __matherr
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(iobaddr)
+0001:00028b63  __get_std_stream_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fputs)
+0001:00028b82  fputs_
+Module: C:\jezyki\WATCOM\lib386\dos\clib3r.lib(fpeint)
+0002:00004934  ___FPE_int
+0002:00004935  ___IRQ_num
+0002:00004936  ___IRQ_int
+0002:00004937  ___MST_pic
+0002:00004938* ___SLV_pic
+Module: C:\jezyki\WATCOM\lib386\math387r.lib(matherr)
+0001:00028bfd  matherr_
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+C:\jezyki\WATCOM\lib386\math387r.lib
+C:\jezyki\WATCOM\lib386\dos\graph.lib
+C:\jezyki\WATCOM\lib386\dos\clib3r.lib
+C:\jezyki\WATCOM\lib386\plib3r.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  1000 (4096.)
+Memory size:  00056950 (354640.)
+Entry point address: 0001:00020ea4
+Link time: 00:00.80

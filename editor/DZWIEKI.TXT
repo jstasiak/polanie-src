@@ -1,0 +1,111 @@
+
+
+Wszystkie dzwieki w formacie WAV z czestotliwoscia 22kHz.
+Dzwieki MUSZA byc krotkie (do 0.7sec).
+
+legenda:
+? - dzwiek ktory mozna podmienic
+* - dzwiek ktory trzeba podmienic
+
+UWAGA!
+- Dobrac poziom glosnosci nowych dzwiekow tak jak przy starych.
+- Pliki z dzwiekami znajduja sie w katalogu DATA.
+
+  plik    |   opis
+----------------------------
+w001.dat  |  cios toporem w drzewo
+w002.dat  |  cios mieczem
+w003.dat  |  strzal z luku
+w004.dat  |  blyskawica
+w005.dat  |  fireball
+w006.dat  |  niedzwiedz atak - ryk
+w007.dat  |  strzyga atak -"szast" pazurami
+w008.dat  |  krowa MUUU /przy zglaszaniu
+w009.dat ?|  smierc zolnierz
+w010.dat ?|  smierc kaplan
+w011.dat ?|  smierc kaplanka
+w012.dat ?|  czar kaplan
+w013.dat *|  smierc niedzwiedz
+w014.dat *|  smierc strzyga
+w015.dat  |  przewracajace sie drzewo
+w016.dat ?|  czar- panienka tarcza
+w017.dat  |  walacy sie budynek
+w018.dat *|  koniec budowy -oznajmienie
+-------------------------------------
+w019.dat  | klick
+w020.dat  | polozenie drogi / palisady
+w021.dat  | klick
+w022.dat  | klick
+--------------------------------------
+w025.dat *| zgloszenie kaplan
+w026.dat *| grupa "Stoimy"
+w028.dat *| zgloszenie topornik/miecznik
+w023.dat *|   -jw-
+w029.dat *| zgloszenie lucznik/wlocznik
+w024.dat *|   -jw-
+w030.dat *| zgloszenie kaplanka
+w031.dat *| zgloszenie kaplan
+w025.dat *|   -jw-
+w032.dat *| zgloszenie rycerz
+w033.dat *| zgloszenie strzyga
+w027.dat *| zgloszenie grupa
+
+w034.dat *| obca kaplanka
+w035.dat *| obcy gosc (won, precz, spadaj itp.)
+w036.dat *|   -jw-
+w037.dat *|   -jw-
+w038.dat *|   -jw-
+----------------------------
+
+w039.dat *| ide miecznik/topornik
+w040.dat *| ide lucznik/wlocznik
+w041.dat *| ide kaplanka
+w042.dat *| ide kaplan
+w043.dat *| ide rycerz
+w044.dat *| ide strzyga
+w045.dat *| idziemy  grupa
+---------------------------
+w046.dat *| atak miecznik/topornik
+w047.dat *| atak lucznik/wlocznik
+w048.dat *| atak kaplanka
+w049.dat *| atak kaplan
+w050.dat *| atak rycerz
+w051.dat *| atak strzyga
+w052.dat *| atak grupa
+----------------------
+w053     *| stoje kaplanka
+w026.dat *| Stoimy grupa
+
+
+
+
+
+---------koniec-------------------
+
+
+
+
+
+
+//////////////////////////////////
+muzyka
+////////////////////////////////
+pliki :graf.00i
+
+i  |kiedy
+-----------
+1 koniec gry
+2 mmenu
+3 wstep
+4 smenu
+5 history
+6 victory
+7 defeat
+8
+9
+10 pl26
+11 pl. 1
+12 pl. 2
+..
+18 pl. 25
+-----------------------------------

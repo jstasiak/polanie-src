@@ -1,0 +1,114 @@
+!define BLANK ""
+c:\projekty\polanie.cd\battle.obj : c:\projekty\polanie.cd\battle.cpp .AUTOD&
+EPEND
+ @c:
+ cd c:\projekty\polanie.cd
+ *wpp386 battle.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -fp3 -fpi87 -&
+4r -bt=dos -mf
+
+c:\projekty\polanie.cd\cd.obj : c:\projekty\polanie.cd\cd.cpp .AUTODEPEND
+ @c:
+ cd c:\projekty\polanie.cd
+ *wpp386 cd.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -fp3 -fpi87 -4r -&
+bt=dos -mf
+
+c:\projekty\polanie.cd\dpmi.obj : c:\projekty\polanie.cd\dpmi.cpp .AUTODEPEN&
+D
+ @c:
+ cd c:\projekty\polanie.cd
+ *wpp386 dpmi.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -fp3 -fpi87 -4r&
+ -bt=dos -mf
+
+c:\projekty\polanie.cd\graphics.obj : c:\projekty\polanie.cd\graphics.cpp .A&
+UTODEPEND
+ @c:
+ cd c:\projekty\polanie.cd
+ *wpp386 graphics.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -fp3 -fpi87&
+ -4r -bt=dos -mf
+
+c:\projekty\polanie.cd\image13h.obj : c:\projekty\polanie.cd\image13h.cpp .A&
+UTODEPEND
+ @c:
+ cd c:\projekty\polanie.cd
+ *wpp386 image13h.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -fp3 -fpi87&
+ -4r -bt=dos -mf
+
+c:\projekty\polanie.cd\ladowani.obj : c:\projekty\polanie.cd\ladowani.cpp .A&
+UTODEPEND
+ @c:
+ cd c:\projekty\polanie.cd
+ *wpp386 ladowani.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -fp3 -fpi87&
+ -4r -bt=dos -mf
+
+c:\projekty\polanie.cd\main.obj : c:\projekty\polanie.cd\main.cpp .AUTODEPEN&
+D
+ @c:
+ cd c:\projekty\polanie.cd
+ *wpp386 main.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -fp3 -fpi87 -4r&
+ -bt=dos -mf
+
+c:\projekty\polanie.cd\mapa.obj : c:\projekty\polanie.cd\mapa.cpp .AUTODEPEN&
+D
+ @c:
+ cd c:\projekty\polanie.cd
+ *wpp386 mapa.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -fp3 -fpi87 -4r&
+ -bt=dos -mf
+
+c:\projekty\polanie.cd\menegdma.obj : c:\projekty\polanie.cd\menegdma.cpp .A&
+UTODEPEND
+ @c:
+ cd c:\projekty\polanie.cd
+ *wpp386 menegdma.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -fp3 -fpi87&
+ -4r -bt=dos -mf
+
+c:\projekty\polanie.cd\mouse.obj : c:\projekty\polanie.cd\mouse.cpp .AUTODEP&
+END
+ @c:
+ cd c:\projekty\polanie.cd
+ *wpp386 mouse.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -fp3 -fpi87 -4&
+r -bt=dos -mf
+
+c:\projekty\polanie.cd\mover1.obj : c:\projekty\polanie.cd\mover1.cpp .AUTOD&
+EPEND
+ @c:
+ cd c:\projekty\polanie.cd
+ *wpp386 mover1.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -fp3 -fpi87 -&
+4r -bt=dos -mf
+
+c:\projekty\polanie.cd\opiswava.obj : c:\projekty\polanie.cd\opiswava.cpp .A&
+UTODEPEND
+ @c:
+ cd c:\projekty\polanie.cd
+ *wpp386 opiswava.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -fp3 -fpi87&
+ -4r -bt=dos -mf
+
+c:\projekty\polanie.cd\playfli.obj : c:\projekty\polanie.cd\playfli.cpp .AUT&
+ODEPEND
+ @c:
+ cd c:\projekty\polanie.cd
+ *wpp386 playfli.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -fp3 -fpi87 &
+-4r -bt=dos -mf
+
+c:\projekty\polanie.cd\world.obj : c:\projekty\polanie.cd\world.cpp .AUTODEP&
+END
+ @c:
+ cd c:\projekty\polanie.cd
+ *wpp386 world.cpp -i=C:\jezyki\WATCOM\h -w4 -e25 -zq -otexan -fp3 -fpi87 -4&
+r -bt=dos -mf
+
+c:\projekty\polanie.cd\pol2.exe : c:\projekty\polanie.cd\battle.obj c:\proje&
+kty\polanie.cd\cd.obj c:\projekty\polanie.cd\dpmi.obj c:\projekty\polanie.cd&
+\graphics.obj c:\projekty\polanie.cd\image13h.obj c:\projekty\polanie.cd\lad&
+owani.obj c:\projekty\polanie.cd\main.obj c:\projekty\polanie.cd\mapa.obj c:&
+\projekty\polanie.cd\menegdma.obj c:\projekty\polanie.cd\mouse.obj c:\projek&
+ty\polanie.cd\mover1.obj c:\projekty\polanie.cd\opiswava.obj c:\projekty\pol&
+anie.cd\playfli.obj c:\projekty\polanie.cd\world.obj .AUTODEPEND
+ @c:
+ cd c:\projekty\polanie.cd
+ @%write pol2.lk1 NAME pol2
+ @%append pol2.lk1 FIL battle.obj,cd.obj,dpmi.obj,graphics.obj,image13h.obj,&
+ladowani.obj,main.obj,mapa.obj,menegdma.obj,mouse.obj,mover1.obj,opiswava.ob&
+j,playfli.obj,world.obj
+ @%append pol2.lk1 
+ *wlink d all SYS dos4g op m op c op maxe=5 op q op symf @pol2.lk1
+

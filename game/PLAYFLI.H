@@ -1,0 +1,1 @@
+int play(char *s);
