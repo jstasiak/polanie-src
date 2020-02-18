@@ -6,6 +6,8 @@ What is this?
 
 https://en.wikipedia.org/wiki/Polanie_(video_game)
 
+See https://github.com/jstasiak/polanie-resources for other Polanie resources.
+
 Where does it come from?
 ------------------------
 
